@@ -1,0 +1,26 @@
+classes +a:owl/Class +hi-inv-rel:subclass-of
+	ProductionUnit
+		Factory
+	Id
+		SovietId
+		TsarTimeId
+		FormerId
+	IndustrialArea subclass-of:Area
+properties +a:rdf/Property +hi-inv-rel:subproperty-of
+	ez domain:Factory range:IndustrialArea d:"Special economic zone, industrial park etc."
+	equipment domain:Factory range:EquipmentCompany
+	facilities-from domain:Company range:ProductionUnit
+		equipment-from domain:ProductionUnit 
+			prodcap domain:Factory range:Factory d:"uses production lines (capacities) of a targeted factory"
+	moved-to domain:ProductionUnit range:ProductionUnit
+	sid range:SovietId d:"An idified name of the production unit in the Soviet time"
+	src domain:ProductionUnit range:Product d:"Raw materials for production unit"
+	tsid range:TsarTimeId d:"An idified name of the production unit before the Revolution by the time of Tsar Government, or by the time of bourgeois Provisional Government in 1917"
+	packs-into domain:ProductionUnit range:Pack
+	raw domain:ProductionUnit range:RawProduct
+	retail domain:ProductionUnit range:Retailer
+	stop domain:ProductionUnit range:Year
+	url domain:ProductionUnit
+	tpd domain:rdf/Statement range:rdfs/Literal d:"Processing of a raw product in tonnes per day"
+	w domain:ProductionUnit range:IntegerAbbreviated
+		w-future d:"Planned number of workers"

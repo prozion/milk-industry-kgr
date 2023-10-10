@@ -1,0 +1,8 @@
+*.log
+*.xml
+test.*
+.RData
+.Rhistory
+test_*
+*_old.tree
+*_0.*

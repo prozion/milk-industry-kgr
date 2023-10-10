@@ -1,0 +1,5 @@
+companies +a:Company
+	Агрофирма_Оптина
+	Вимм-Билль-Данн hq:Москва url:wbd.ru parent:PepsiCo owns-tm:Имунеле
+	ГК_Белый_Медведь
+	Молвест

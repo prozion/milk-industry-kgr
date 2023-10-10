@@ -1,0 +1,11 @@
+sources +a:Source
+	Fabr url:fabricators.ru/zavody d:"Список производств и компаний пищевой промышленности"
+	Oborud url:oborudunion.ru/company/pischevoe-oborudovanie d:"Рейтинг компаний-производителей оборудования для пищевой промышленности, исходя из посещаемости их сайтов"
+	Porti url:porti.ru/company d:"Информация по акциям компаний"
+	Ppr url:poporyadku.ru d:"Таблицы ОКОНХ и ОКВЭД"
+	Pr url:product.ru d:"Поиск компаний по производимому продукту"
+	Retailers url:retail.ru/rbc/tradingnetworks/businesses/food-retail-alcohol d:"Список ритейлеров"
+	RbcCmp url:companies.rbc.ru d:"Краткое досье по компаниям"
+	W url:wikipedia.org d:"Википедия"
+
+

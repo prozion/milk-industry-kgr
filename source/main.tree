@@ -1,0 +1,35 @@
+food_industry a:owl/Ontology ns:https://purl.org/prozion/milk_industry# rdfs/label:"Knowledge graph on Russian milk food industry"
+	namespaces
+		rdf ns:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+		rdfs ns:http://www.w3.org/2000/01/rdf-schema#
+		owl ns:http://www.w3.org/2002/07/owl#
+		xsd ns:http://www.w3.org/2001/XMLSchema#
+	[ontologies/company.tree]
+	[ontologies/editing.tree]
+	[ontologies/factory.tree]
+	[ontologies/food_product.tree]
+	[ontologies/internet.tree]
+	[ontologies/number.tree]
+	[ontologies/object.tree]
+	[ontologies/organization.tree]
+	[ontologies/place.tree]
+	[ontologies/process.tree]
+	[ontologies/product.tree]
+	[ontologies/source.tree]
+	[ontologies/space.tree]
+	[ontologies/taxonomy.tree]
+	[ontologies/time.tree]
+	[ontologies/trademark.tree]
+	individuals
+		[taxonomies/products.tree]
+		[facts/companies.tree]
+		[facts/factories.tree]
+		; [facts/retailers.tree]
+		[facts/sources.tree]
+		[facts/trademarks.tree]
+		Россия a:Country +a:Place +hi-inv-rel:country
+			[facts/places_russia.tree]
+			[facts/places_russia_extra.tree]
+			[facts/places_ldnr.tree]
+		[facts/places_world.tree]
+		

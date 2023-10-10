@@ -1,0 +1,18 @@
+classes +a:owl/Class +hi-inv-rel:subclass-of
+	MessengerId subclass-of:rdfs/Literal
+	Uri subclass-of:rdfs/Literal
+		Email
+		Url
+			UrlCore d:"Url with prefixes removed: http://, https://, https://www. etc. to make it neater"
+properties +a:rdf/Property +hi-inv-rel:subproperty-of
+	email range:Email
+	messenger-id range:MessengerId
+		matrix 
+		tg
+	url range:UrlCore
+		fb
+		github
+		linkedin
+		old-url
+		vk
+		yt

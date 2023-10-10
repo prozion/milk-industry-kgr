@@ -1,0 +1,26 @@
+ритейлеры +a:Retailer
+	Азбука_Вкуса
+	Ароматный_мир
+	Ашан parent:Auchan_Holding start:2002 url:auchan.ru
+	Верный start:2012 founder:Рогачев_Андрей
+	ВкусВилл founder:Кривенко_Андрей
+	Дикси parent:Тандер url:dixy.ru
+	Европа url:europa-ts.ru
+	Карусель
+	Лента
+	Линия url:linia-market.ru
+	Магнит parent:Тандер start:1994 hq:Краснодар url:magnit.ru
+	Магнолия start:1992 hq:Москва
+	Метрополис
+	Монетка start:2001 hq:Екатеринбург
+	Огонек_Эконом url:ogonek68.ru vk:vk.com/ogonek68
+	ОКей name:"О'Кей"
+	Перекресток parent:X5
+	Победа start:2015 hq:Ульяновск url:магазинпобеда.рф vk:vk.com/magazinpobeda
+	Пятерочка parent:X5 founder:Рогачев_Андрей
+	Самокат
+	Светофор
+	Чижик parent:X5
+	Billa
+	FixPrice
+	Metro url:metro-cc.ru

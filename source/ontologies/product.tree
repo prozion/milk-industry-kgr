@@ -1,0 +1,6 @@
+classes +a:owl/Class +hi-inv-rel:subclass-of
+	Product subclass-of:Object
+		Equipment
+		Artifact
+properties +a:rdf/Property +hi-inv-rel:subproperty-of
+	title domain:Artifact range:rdfs/Literal

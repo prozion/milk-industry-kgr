@@ -1,0 +1,8 @@
+classes +a:owl/Class +hi-inv-rel:subclass-of
+	Time subclass-of:rdfs/Literal
+		Date
+		Year
+properties +a:rdf/Property +hi-inv-rel:subproperty-of
+	end range:Time
+	start range:Time
+	year range:Year
