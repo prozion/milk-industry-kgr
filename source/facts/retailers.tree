@@ -2,8 +2,8 @@
 	Азбука_Вкуса
 	Ароматный_мир
 	Ашан parent:Auchan_Holding start:2002 url:auchan.ru
-	Верный start:2012 founder:Рогачев_Андрей
-	ВкусВилл founder:Кривенко_Андрей
+	Верный start:2012
+	ВкусВилл
 	Дикси parent:Тандер url:dixy.ru
 	Европа url:europa-ts.ru
 	Карусель
@@ -17,7 +17,7 @@
 	ОКей name:"О'Кей"
 	Перекресток parent:X5
 	Победа start:2015 hq:Ульяновск url:магазинпобеда.рф vk:vk.com/magazinpobeda
-	Пятерочка parent:X5 founder:Рогачев_Андрей
+	Пятерочка parent:X5
 	Самокат
 	Светофор
 	Чижик parent:X5

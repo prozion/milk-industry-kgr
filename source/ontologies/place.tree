@@ -1,4 +1,6 @@
 classes +a:owl/Class +hi-inv-rel:subclass-of
+	Place subclass-of:Object
+		City
 	Population subclass-of:IntegerAbbreviated
 properties +a:rdf/Property +hi-inv-rel:subproperty-of
 	pop domain:City range:Population d:"Number of town dwellers (population)"

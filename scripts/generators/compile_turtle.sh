@@ -1,3 +1,3 @@
 #!/bin/bash
 
-compile-ttl.rkt "source/main.tree" "turtle/food_industry.ttl"
+compile-ttl.rkt "/home/denis/projects/milk_industry_kgr/source/main_geo.tree" "/home/denis/projects/milk_industry_kgr/turtle/milk_industry_geo.ttl"

@@ -1,6 +1,5 @@
 classes +a:owl/Class +hi-inv-rel:subclass-of
-	Trademark subclass-of:rdfs/Literal
-		Trademark
+	Trademark subclass-of:owl/Thing
 properties +a:rdf/Property +hi-inv-rel:subproperty-of
 	applies-to domain:Trademark range:Product
 	slogan domain:Trademark range:rdfs/Literal

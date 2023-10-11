@@ -1,0 +1,4355 @@
+@prefix : <https://purl.org/prozion/milk_industry#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+:7утра
+ rdf:type :Company .
+
+:abbr
+ rdfs:comment "Abbreviation" ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:Alba
+ :country :Италия ;
+ rdf:type :Place ;
+ :lat "44.698109" ;
+ :lon "8.031082" .
+
+:alma-mater
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :uni .
+
+:Altagamma_Food
+ :place :Москва ;
+ :url "altagammafood.com" ;
+ :prod :Буррата, :Буррата_с_черным_трюфелем, :Страчателла, :Моцарелла, :Чилиеджине, :Тречча, :Моцарела_буфалина, :Боккончино, :Рикотта, :Качиорикотта, :Буррикотта, :Скаморца, :Скаморца_аффумиката, :Примосале, :Провола_аффумиката, :Страккино ;
+ :start "2015" ;
+ rdf:type :ProductionUnit ;
+ :phone "89651848888" .
+
+:Amsterdam
+ :country :Нидерланды ;
+ rdf:type :Place ;
+ :lat "52.373057" ;
+ :lon "4.892557" .
+
+:applies-to
+ rdfs:domain :Trademark ;
+ rdf:type rdf:Property ;
+ rdfs:range :Product .
+
+:Area
+ rdf:type owl:Class ;
+ rdfs:subClassOf owl:Thing .
+
+:Artifact
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Product .
+
+:Auchan_Holding
+ rdf:type :Company .
+
+:Billa
+ rdf:type :Retailer .
+
+:BioMatrix
+ rdf:type :FoodProduct ;
+ :broader :Продукт_кисломолочный .
+
+:BioMax
+ rdf:type :Trademark .
+
+:Bristol
+ :country :Великобритания ;
+ rdf:type :Place ;
+ :lat "51.450158" .
+
+:broader
+ owl:inverseOf :narrower ;
+ rdfs:comment "Substitution for skos/broader" ;
+ rdf:type rdf:Property, owl:TransitiveProperty, owl:ReflexiveProperty .
+
+:Chandlers_Ford
+ :country :Великобритания ;
+ rdf:type :Place ;
+ :lat "50.986997" .
+
+:Chicago
+ :country :США ;
+ rdf:type :Place ;
+ :lat "41.875732" .
+
+:city
+ rdfs:subPropertyOf :place ;
+ rdf:type rdf:Property ;
+ rdfs:range :City .
+
+:City
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Place .
+
+:class-type
+ rdfs:domain owl:Class ;
+ rdf:type rdf:Property ;
+ rdfs:range owl:Class .
+
+:College
+ rdf:type owl:Class ;
+ rdfs:subClassOf :EducationalUnit .
+
+:Committee
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Organization .
+
+:company
+ rdfs:subPropertyOf :org ;
+ rdf:type rdf:Property ;
+ rdfs:range :Company .
+
+:Company
+ rdf:type owl:Class ;
+ rdfs:subClassOf :PropertyUnit, :Organization .
+
+:country
+ rdfs:domain :Place ;
+ rdf:type rdf:Property ;
+ rdfs:range :Country .
+
+:Country
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Object .
+
+:Croix
+ :country :Франция ;
+ rdf:type :Place ;
+ :lat "50.680128" ;
+ :lon "3.133854" .
+
+:Danone
+ rdf:type :Company .
+
+:Danone_Industry
+ rdf:type :ProductionUnit ;
+ :place :Любучаны ;
+ :prod :Продукт_молочный ;
+ :email "mosdanone@danone.com" ;
+ :company :Danone .
+
+:Date
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Time .
+
+:deabbr
+ rdfs:comment "Deabbreviation" ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:Decimal
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+:def
+ rdfs:comment "Definition" ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:EducationalUnit
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Organization .
+
+:email
+ rdf:type rdf:Property ;
+ rdfs:range :Email .
+
+:Email
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Uri .
+
+:end
+ rdf:type rdf:Property ;
+ rdfs:range :Time .
+
+:Endorf
+ rdf:type :Trademark .
+
+:Equipment
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Product .
+
+:equipment
+ rdfs:domain :Factory ;
+ rdf:type rdf:Property ;
+ rdfs:range :EquipmentCompany .
+
+:equipment-from
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :facilities-from ;
+ rdfs:domain :ProductionUnit .
+
+:EquipmentCompany
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Company .
+
+:ez
+ rdfs:domain :Factory ;
+ rdfs:comment "Special economic zone, industrial park etc." ;
+ rdf:type rdf:Property ;
+ rdfs:range :IndustrialArea .
+
+:Fabr
+ :url "fabricators.ru/zavody" ;
+ rdfs:comment "Список производств и компаний пищевой промышленности" ;
+ rdf:type :Source .
+
+:facilities-from
+ rdfs:domain :Company ;
+ rdf:type rdf:Property ;
+ rdfs:range :ProductionUnit .
+
+:Factory
+ rdf:type owl:Class ;
+ rdfs:subClassOf :PropertyUnit, :ProductionUnit .
+
+:Fara_San_Martino
+ :country :Италия ;
+ rdf:type :Place ;
+ :lat "42.089601" ;
+ :lon "14.205158" .
+
+:fat
+ rdfs:domain :FoodProduct ;
+ rdfs:comment "fat percent in the product" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Decimal .
+
+:fb
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :url .
+
+:FixPrice
+ rdf:type :Retailer .
+
+:Float
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+<https://purl.org/prozion/milk_industry#>
+ rdf:type owl:Ontology ;
+ owl:imports <http://www.w3.org/1999/02/22-rdf-syntax-ns#>, <http://www.w3.org/2000/01/rdf-schema#>, <http://www.w3.org/2002/07/owl#>, <http://www.w3.org/2001/XMLSchema#> ;
+ rdfs:label "Knowledge graph on Russian milk food industry" .
+
+:Food_Union
+ rdf:type :Company .
+
+:FoodProduct
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Product .
+
+:former-id
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :id .
+
+:FormerId
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Id .
+
+:from
+ rdfs:domain owl:Thing ;
+ rdf:type rdf:Property ;
+ rdfs:range owl:Thing .
+
+:GFI_RUS
+ :place :Москва ;
+ :url "gfi-rus.com" ;
+ :w "36" ;
+ rdf:type :ProductionUnit ;
+ :phone "84958856321" .
+
+:github
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :url .
+
+:GroupOfObjects
+ rdf:type owl:Class ;
+ rdfs:subClassOf owl:Thing .
+
+:GroupOfPeople
+ rdf:type owl:Class ;
+ rdfs:subClassOf :GroupOfObjects .
+
+:handles-prod
+ rdfs:domain :Company ;
+ rdf:type rdf:Property ;
+ rdfs:range :Product .
+
+:hq
+ rdfs:subPropertyOf :place ;
+ rdfs:domain :Organization ;
+ rdfs:comment "Headquarters" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Place .
+
+:Id
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+:id
+ rdf:type rdf:Property .
+
+:IndustrialArea
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Area .
+
+:Integer
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+:IntegerAbbreviated
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+:lat
+ rdfs:domain :Place ;
+ rdfs:comment "Latitude" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Float .
+
+:Lausanne
+ :country :Швейцария ;
+ rdf:type :Place ;
+ :lat "46.521183" ;
+ :lon "6.623126" .
+
+:linkedin
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :url .
+
+:lon
+ rdfs:domain :Place ;
+ rdfs:comment "Longitude" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Float .
+
+:London
+ :country :Великобритания ;
+ rdf:type :Place ;
+ :lat "51.507351" .
+
+:matrix
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :messenger-id .
+
+:messenger-id
+ rdf:type rdf:Property ;
+ rdfs:range :MessengerId .
+
+:MessengerId
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+:Metro
+ rdf:type :Retailer ;
+ :url "metro-cc.ru" .
+
+:moved-to
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :ProductionUnit .
+
+:name
+ rdfs:subPropertyOf rdfs:label ;
+ rdfs:domain :Object ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:narrower
+ rdfs:comment "Substitution for skos/narrower" ;
+ rdf:type rdf:Property .
+
+:NonOKONHProduct
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Product .
+
+:NonprofitCorporation
+ rdf:type owl:Class ;
+ rdfs:subClassOf :NonprofitOrganization .
+
+:NonprofitOrganization
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Organization .
+
+:note
+ rdfs:comment "Analog to skos/note" ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:Object
+ rdf:type owl:Class ;
+ rdfs:subClassOf owl:Thing .
+
+:Oborud
+ :url "oborudunion.ru/company/pischevoe-oborudovanie" ;
+ rdfs:comment "Рейтинг компаний-производителей оборудования для пищевой промышленности, исходя из посещаемости их сайтов" ;
+ rdf:type :Source .
+
+:old-url
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :url .
+
+:org
+ rdf:type rdf:Property ;
+ rdfs:range :Organization .
+
+:Organization
+ rdf:type owl:Class ;
+ rdfs:subClassOf :GroupOfPeople .
+
+:owned-by
+ rdfs:domain :Property ;
+ rdf:type rdf:Property ;
+ rdfs:range :Organization .
+
+:owns-tm
+ rdfs:domain :Organization ;
+ rdf:type rdf:Property ;
+ rdfs:range :Trademark .
+
+:Pack
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Product .
+
+:packs-into
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :Pack .
+
+:parent
+ rdfs:domain :Organization ;
+ rdfs:comment "Parent organization in a form of Holding, umbrella company or whatever" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Organization .
+
+:ParentCompany
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Company .
+
+:Paris
+ :country :Франция ;
+ rdf:type :Place ;
+ :lat "48.856663" ;
+ :lon "2.351556" .
+
+:part-of
+ rdfs:domain :Object ;
+ rdf:type rdf:Property ;
+ rdfs:range :Object .
+
+:PepsiCo
+ owl:sameAs :ПепсиКо ;
+ rdf:type :Company .
+
+:phone
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:Pittsburgh
+ :country :США ;
+ rdf:type :Place ;
+ :lat "40.440601" .
+
+:place
+ rdf:type rdf:Property ;
+ rdfs:range :Place .
+
+:Place
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Object .
+
+:pop
+ rdfs:domain :City ;
+ rdfs:comment "Number of town dwellers (population)" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Population .
+
+:Population
+ rdf:type owl:Class ;
+ rdfs:subClassOf :IntegerAbbreviated .
+
+:Porti
+ :url "porti.ru/company" ;
+ rdfs:comment "Информация по акциям компаний" ;
+ rdf:type :Source .
+
+:Ppr
+ :url "poporyadku.ru" ;
+ rdfs:comment "Таблицы ОКОНХ и ОКВЭД" ;
+ rdf:type :Source .
+
+:Pr
+ :url "product.ru" ;
+ rdfs:comment "Поиск компаний по производимому продукту" ;
+ rdf:type :Source .
+
+:prod
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :Product .
+
+:prod-group
+ rdfs:domain :Product ;
+ rdf:type rdf:Property ;
+ rdfs:range :Product .
+
+:prodcap
+ rdfs:subPropertyOf :equipment-from ;
+ rdfs:domain :Factory ;
+ rdfs:comment "uses production lines (capacities) of a targeted factory" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Factory .
+
+:Product
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Object .
+
+:ProductionUnit
+ rdf:type owl:Class .
+
+:Property
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Object .
+
+:PropertyUnit
+ rdf:type owl:Class .
+
+:raw
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :RawProduct .
+
+:RawProduct
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Product .
+
+:RbcCmp
+ :url "companies.rbc.ru" ;
+ rdfs:comment "Краткое досье по компаниям" ;
+ rdf:type :Source .
+
+rdfs:label
+ rdf:type rdf:Property .
+
+rdfs:Literal
+ rdf:type owl:Class .
+
+:ResearchCenter
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Organization .
+
+:retail
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :Retailer .
+
+:Retailer
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Company .
+
+:Retailers
+ :url "retail.ru/rbc/tradingnetworks/businesses/food-retail-alcohol" ;
+ rdfs:comment "Список ритейлеров" ;
+ rdf:type :Source .
+
+:s
+ rdfs:comment "Source" ;
+ rdf:type rdf:Property .
+
+:s-url
+ rdfs:subPropertyOf :s, :url ;
+ rdf:type rdf:Property ;
+ rdfs:range :UrlCore .
+
+:s-wiki
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :s .
+
+:sid
+ rdfs:comment "An idified name of the production unit in the Soviet time" ;
+ rdf:type rdf:Property ;
+ rdfs:range :SovietId .
+
+:slogan
+ rdfs:domain :Trademark ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:Source
+ rdf:type owl:Class .
+
+:SovietId
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Id .
+
+:src
+ rdfs:domain :ProductionUnit ;
+ rdfs:comment "Raw materials for production unit" ;
+ rdf:type rdf:Property ;
+ rdfs:range :Product .
+
+:start
+ rdf:type rdf:Property ;
+ rdfs:range :Time .
+
+:Stmt_Бердянск_pop_113512
+ rdf:subject :Бердянск ;
+ :year "2019" ;
+ rdf:type rdf:Statement ;
+ rdf:object "113512" ;
+ rdf:predicate :pop .
+
+:Stmt_Гиагинский_молочный_завод_w_477
+ rdf:subject :Гиагинский_молочный_завод ;
+ :year "2015" ;
+ rdf:type rdf:Statement ;
+ rdf:object "477" ;
+ rdf:predicate :w .
+
+:Stmt_Глубокский_молочноконсервный_комбинат_w_1036
+ rdf:subject :Глубокский_молочноконсервный_комбинат ;
+ :year "2020" ;
+ rdf:type rdf:Statement ;
+ rdf:object "1036" ;
+ rdf:predicate :w .
+
+:Stmt_Кипринский_молочный_завод_w_0.2К
+ rdf:subject :Кипринский_молочный_завод ;
+ :year "2005" ;
+ rdf:type rdf:Statement ;
+ rdf:object "0.2К" ;
+ rdf:predicate :w .
+
+:Stmt_Лианозовский_молочный_комбинат_w_2.2К
+ rdf:subject :Лианозовский_молочный_комбинат ;
+ :year "2015" ;
+ rdf:type rdf:Statement ;
+ rdf:object "2.2К" ;
+ rdf:predicate :w .
+
+:Stmt_Московский_жировой_комбинат_w_350
+ rdf:subject :Московский_жировой_комбинат ;
+ :year "2015" ;
+ rdf:type rdf:Statement ;
+ rdf:object "350" ;
+ rdf:predicate :w .
+
+:Stmt_Останкинский_молочный_комбинат_w_844
+ rdf:subject :Останкинский_молочный_комбинат ;
+ :year "2013" ;
+ rdf:type rdf:Statement ;
+ rdf:object "844" ;
+ rdf:predicate :w .
+
+:stop
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :Year .
+
+:Subsidiary
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Company .
+
+:subsidiary-of
+ rdfs:domain :Company ;
+ rdf:type rdf:Property ;
+ rdfs:range :Subsidiary .
+
+:Tare
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Pack .
+
+:tg
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :messenger-id .
+
+:Time
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+:title
+ rdfs:domain :Artifact ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:tm
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :Trademark .
+
+:tpd
+ rdfs:domain rdf:Statement ;
+ rdfs:comment "Processing of a raw product in tonnes per day" ;
+ rdf:type rdf:Property ;
+ rdfs:range rdfs:Literal .
+
+:Trademark
+ rdf:type owl:Class ;
+ rdfs:subClassOf owl:Thing, :PropertyUnit .
+
+:TsarTimeId
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Id .
+
+:tsid
+ rdfs:comment "An idified name of the production unit before the Revolution by the time of Tsar Government, or by the time of bourgeois Provisional Government in 1917" ;
+ rdf:type rdf:Property ;
+ rdfs:range :TsarTimeId .
+
+:uni
+ rdfs:subPropertyOf :org ;
+ rdf:type rdf:Property ;
+ rdfs:range :University .
+
+:University
+ rdf:type owl:Class ;
+ rdfs:subClassOf :EducationalUnit .
+
+:Uri
+ rdf:type owl:Class ;
+ rdfs:subClassOf rdfs:Literal .
+
+:url
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :UrlCore .
+
+:Url
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Uri .
+
+:UrlCore
+ rdfs:subClassOf :Url ;
+ rdfs:comment "Url with prefixes removed: http://, https://, https://www. etc. to make it neater" ;
+ rdf:type owl:Class .
+
+:Villeneuve-d-Ascq
+ :country :Франция ;
+ rdf:type :Place ;
+ :lat "50.616697" ;
+ :lon "3.149709" .
+
+:Violette
+ rdf:type :Trademark .
+
+:Viott_Group
+ :place :Краснодар ;
+ :url "viott.ru" ;
+ :w "1" ;
+ rdf:type :ProductionUnit ;
+ :phone "8612595738" .
+
+:Virtex_Food
+ rdf:type :ProductionUnit ;
+ :place :Агролес ;
+ :owns-tm :Чим-Чим ;
+ :url "virtex-food.ru" ;
+ :prod :Сыр_Адыгейский_жареный ;
+ :hq :Бердск .
+
+:vk
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :url .
+
+:w
+ rdfs:domain :ProductionUnit ;
+ rdf:type rdf:Property ;
+ rdfs:range :IntegerAbbreviated .
+
+:W
+ :url "wikipedia.org" ;
+ rdfs:comment "Википедия" ;
+ rdf:type :Source .
+
+:w-future
+ rdfs:subPropertyOf :w ;
+ rdfs:comment "Planned number of workers" ;
+ rdf:type rdf:Property .
+
+:working-note
+ rdfs:subPropertyOf :note ;
+ rdfs:comment "Analog to skos/editorialNote" ;
+ rdf:type rdf:Property .
+
+:X5
+ rdf:type :Company ;
+ :owns-tm :Светаево .
+
+:year
+ rdf:type rdf:Property ;
+ rdfs:range :Year .
+
+:Year
+ rdf:type owl:Class ;
+ rdfs:subClassOf :Time .
+
+:yt
+ rdf:type rdf:Property ;
+ rdfs:subPropertyOf :url .
+
+:Абсолют
+ rdf:type :Company .
+
+:Абхазия
+ rdf:type :Country .
+
+:Агрокомплекс_Выселковский
+ rdf:type :Company .
+
+:Агролес
+ rdf:type :Place ;
+ :lat "54.756667" ;
+ :lon "83.134444" ;
+ :pop "1323" ;
+ :country :Россия .
+
+:Агропредприятие_Рыжово
+ :place :Рыжово ;
+ :company :Абсолют ;
+ :prod :Молоко ;
+ :start "2008" ;
+ :w "45" ;
+ rdf:type :ProductionUnit .
+
+:Агропредприятие_Щапово
+ rdf:type :ProductionUnit ;
+ :place :Щапово ;
+ :prod :Моцарелла ;
+ :sid "ОП_ВНИИ_животноводства" ;
+ :start "1962" .
+
+:Агрофирма_Оптина
+ rdf:type :Company .
+
+:Агуша
+ rdf:type :Trademark .
+
+:Адыге-Хабль
+ rdf:type :Place ;
+ :lat "44.333333" ;
+ :lon "41.933333" ;
+ :pop "3872" ;
+ :country :Россия .
+
+:Адыгейский_молкомбинат
+ rdf:type :ProductionUnit ;
+ :place :Майкоп ;
+ :owns-tm :Майкопская_молочная_продукция ;
+ :url "molkom-adyg.ru" ;
+ :prod :Айран_1_5, :Щхыу_2_5, :Мацони_термостатный_2_5, :Сыр_Адыгейский, :Сыр_Адыгейский_копченый, :Сулугуни, :Сулугуни_копченый, :Чечил_косичка_молочный, :Чечил_косичка_копченый, :Чечил, :Сыр_по-охотничьи, :Сыр_Российский, :Молоко_пастеризованное_2_5, :Молоко_пастеризованное_3_2, :Кефир_2_5, :Ряженка_2_5, :Сметана_20, :Сметана_15, :Творог_0, :Творог_5, :Творог_9, :Йогурт_2_5, :Йогурт_клубника, :Йогурт_персик, :Йогурт_без_сахара, :Масло_сливочное_традиционное, :Масло_сливочное_крестьянское, :Масло_топленое ;
+ :start "1932" .
+
+:Азбука_Вкуса
+ rdf:type :Retailer .
+
+:Азербайджан
+ rdf:type :Country .
+
+:Айран
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Айран_1_5
+ rdf:type :FoodProduct ;
+ :broader :Айран .
+
+:Алексеевский_молочноконсервный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Алексеевское ;
+ :url "amkk.ru" ;
+ :company :Ренна ;
+ :prod :Молоко_сгущенное ;
+ :start "1960" .
+
+:Алексеевское
+ rdf:type :Place ;
+ :lat "55.305278" ;
+ :lon "50.114167" ;
+ :pop "12757" ;
+ :country :Россия .
+
+:Алма-Ата
+ :country :Казахстан ;
+ rdf:type :Place ;
+ :lat "43.273564" ;
+ :lon "76.914851" .
+
+:Армавир
+ rdf:type :Place ;
+ :lat "45.001111" ;
+ :lon "41.132500" ;
+ :pop "183082" ;
+ :country :Россия .
+
+:Армения
+ rdf:type :Country .
+
+:Ароматный_мир
+ rdf:type :Retailer .
+
+:Артем
+ rdf:type :Place ;
+ :lat "43.362222" ;
+ :lon "132.181389" ;
+ :pop "57765" ;
+ :country :Россия .
+
+:Афины
+ :country :Греция ;
+ rdf:type :Place ;
+ :lat "37.975534" ;
+ :lon "23.734855" .
+
+:Ацидолакт
+ rdf:type :FoodProduct ;
+ :broader :Продукт_кисломолочный .
+
+:Ашан
+ rdf:type :Retailer ;
+ :url "auchan.ru" ;
+ :start "2002" ;
+ :parent :Auchan_Holding .
+
+:Ашхабад
+ rdf:type :Place ;
+ :lat "37.935190" ;
+ :lon "58.378977" ;
+ :pop "828100" ;
+ :country :Туркменистан .
+
+:Б_Ю_Александров
+ :place :Пушкино ;
+ :url "by-alexandrov.ru" ;
+ rdfs:label "Б.Ю. Александров" ;
+ :w "1064" ;
+ rdf:type :ProductionUnit ;
+ :phone "84959933482" .
+
+:Бабулины_продукты
+ rdf:type :Trademark .
+
+:Баку
+ :country :Азербайджан ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Барановичи
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.132363" ;
+ :lon "26.017618" .
+
+:Баренцбург
+ :country :Норвегия ;
+ rdf:type :Place ;
+ :lat "78.065533" ;
+ :lon "14.211051" .
+
+:Барнаул
+ rdf:type :Place ;
+ :lat "53.348056" ;
+ :lon "83.780000" ;
+ :pop "633432" ;
+ :country :Россия .
+
+:Башкирский_холод
+ rdf:type :ProductionUnit ;
+ :place :Уфа ;
+ :url "bashcold.ru" ;
+ :prod :Мороженое .
+
+:Бежин_луг
+ rdf:type :Trademark .
+
+:Беларусь
+ rdf:type :Country .
+
+:Белая_Глина
+ rdf:type :Place ;
+ :lat "46.073611" ;
+ :lon "40.871389" ;
+ :pop "16753" ;
+ :country :Россия .
+
+:Белгород
+ rdf:type :Place ;
+ :lat "50.597500" ;
+ :lon "36.588889" ;
+ :pop "378390" ;
+ :country :Россия .
+
+:Белгородский_молочный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Белгород ;
+ :url "bg-moloko.ru" .
+
+:Белевица
+ rdf:type :Place ;
+ :lat "52.510556" ;
+ :lon "33.232222" ;
+ :pop "209" ;
+ :country :Россия .
+
+:Белоглинское_молоко
+ rdf:type :ProductionUnit ;
+ :place :Белая_Глина ;
+ :url "belmol.tilda.ws" ;
+ :prod :Моцарелла, :Чечил, :Творог, :Сыр_плавленый, :Сыр_Адыгейский, :Сыр_Голландский, :Брынза, :Сметана, :Молоко, :Масло_сливочное_крестьянское, :Сулугуни, :Мороженое ;
+ :start "2010" .
+
+:Берeзовский_сыродельный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Береза ;
+ :company :Савушкин_продукт ;
+ :prod :Сыр ;
+ :start "1944" .
+
+:Бердск
+ rdf:type :Place ;
+ :lat "54.758333" ;
+ :lon "83.107222" ;
+ :pop "104237" ;
+ :country :Россия .
+
+:Бердянск
+ rdf:type :Place ;
+ :lat "46.755673" ;
+ :lon "36.789317" ;
+ :pop "113512" ;
+ :country :Россия .
+
+:Береза
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "52.534608" ;
+ :lon "24.984475" .
+
+:Биойогурт
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Биокефир
+ rdf:type :FoodProduct ;
+ :broader :Кефир .
+
+:Биопродукт
+ :place :Москва ;
+ :url "bioproduct.ru" ;
+ :w "1" ;
+ rdf:type :ProductionUnit ;
+ :phone "84959810467" .
+
+:Бипико
+ :place :Биробиджан ;
+ :w "88" ;
+ rdf:type :ProductionUnit ;
+ :phone "89148174301" .
+
+:Биробиджан
+ rdf:type :Place ;
+ :lat "48.794722" ;
+ :lon "132.921667" ;
+ :pop "74777" ;
+ :country :Россия .
+
+:Бифидок
+ rdf:type :FoodProduct ;
+ :broader :Продукт_кисломолочный .
+
+:Бифилюкс
+ rdf:type :FoodProduct ;
+ :broader :Продукт_кисломолочный .
+
+:Бишкек
+ :country :Киргизия ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Бобров
+ rdf:type :Place ;
+ :lat "51.090278" ;
+ :lon "40.031944" ;
+ :pop "20238" ;
+ :country :Россия .
+
+:Бобровский_сыродельный_завод
+ :place :Тройня ;
+ :url "richart.ru" ;
+ :w "707" ;
+ rdf:type :ProductionUnit .
+
+:Бобруйск
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.145597" ;
+ :lon "29.225538" .
+
+:Боголюбово
+ rdf:type :Place ;
+ :lat "56.199167" ;
+ :lon "40.533889" ;
+ :pop "4528" ;
+ :country :Россия .
+
+:Боккончино
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский .
+
+:Борисов
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "54.224069" ;
+ :lon "28.511755" .
+
+:Брасовские_сыры
+ :url "bramo.ru" ;
+ :w "270" ;
+ rdf:type :ProductionUnit .
+
+:Брест
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "52.093754" ;
+ :lon "23.685107" .
+
+:Брынза
+ rdf:type :FoodProduct ;
+ :broader :Сыр_рассольный .
+
+:Брюнуст
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сывороточный .
+
+:Брянск
+ rdf:type :Place ;
+ :lat "53.242778" ;
+ :lon "34.366667" ;
+ :pop "404793" ;
+ :country :Россия .
+
+:Брянский_гормолзавод
+ :place :Брянск ;
+ :url "ам-ам.рф" ;
+ :w "151" ;
+ rdf:type :ProductionUnit ;
+ :phone "84832416261" .
+
+:Буррата
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский .
+
+:Буррата_с_черным_трюфелем
+ rdf:type :FoodProduct ;
+ :broader :Буррата .
+
+:Буррикотта
+ rdf:type :FoodProduct ;
+ :broader :Рикотта .
+
+:Быхов
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.518235" ;
+ :lon "30.240320" .
+
+:Валансе
+ rdf:type :FoodProduct ;
+ :broader :Сыр_козий, :Сыр_свежий .
+
+:Варенец
+ rdf:type :FoodProduct ;
+ :broader :Продукт_кисломолочный .
+
+:Варенец_термостатный
+ rdf:type :FoodProduct ;
+ :broader :Варенец .
+
+:Вдоволь
+ rdf:type :Trademark .
+
+:Вектор-БиАльгам
+ :place :Кольцово ;
+ :url "bialgam.ru" ;
+ :w "310" ;
+ rdf:type :ProductionUnit ;
+ :phone "83833365151" .
+
+:Великобритания
+ rdf:type :Country .
+
+:Верблюжья_Ферма
+ rdf:type :ProductionUnit ;
+ :place :Махачкала ;
+ :url "verblyujya-ferma-dag.ru" .
+
+:Вердовский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Сараи ;
+ :url "verdamilk.ru" .
+
+:Верный
+ rdf:type :Retailer ;
+ :start "2012" .
+
+:Веселый_молочник
+ rdf:type :Trademark .
+
+:Вильнюс
+ :country :Литва ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Вимм-Билль-Данн
+ rdf:type :Company ;
+ :owns-tm :Имунеле ;
+ :url "wbd.ru" ;
+ :hq :Москва ;
+ :parent :PepsiCo .
+
+:Вита
+ :place :Железноводск ;
+ :w "67" ;
+ rdf:type :ProductionUnit ;
+ :phone "8793252876" .
+
+:Витебск
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "55.184217" ;
+ :lon "30.202878" .
+
+:ВкусВилл
+ rdf:type :Retailer .
+
+:Вкуснотеево
+ rdf:type :ProductionUnit, :Trademark ;
+ :place :Воронеж ;
+ :url "масловкуснотеево.рф" ;
+ :company :Молвест ;
+ :prod :Масло_сливочное .
+
+:Вкусняшка
+ rdf:type :ProductionUnit ;
+ :place :Котовск ;
+ :url "vkusnyashka.pro" ;
+ :prod :Молоко_сгущенное_вареное, :Молоко_сгущенное .
+
+:Волжские_просторы
+ rdf:type :Trademark .
+
+:Волжский
+ rdf:type :Place ;
+ :lat "48.797778" ;
+ :lon "44.746111" ;
+ :pop "326841" ;
+ :country :Россия .
+
+:Воля
+ rdf:type :Place ;
+ :lat "51.755278" ;
+ :lon "39.509167" ;
+ :pop "7839" ;
+ :country :Россия .
+
+:Воронеж
+ rdf:type :Place ;
+ :lat "51.661667" ;
+ :lon "39.200278" ;
+ :pop "1054111" ;
+ :country :Россия .
+
+:Вурда
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сывороточный .
+
+:Выселки
+ rdf:type :Place ;
+ :lat "45.578056" ;
+ :lon "39.656944" ;
+ :pop "19987" ;
+ :country :Россия .
+
+:Гарцский_сыр
+ :broader :Сыр_кисломолочный ;
+ rdfs:comment "Немецкий сыр из кислого молока" ;
+ rdf:type :FoodProduct .
+
+:Гиагинская
+ rdf:type :Place ;
+ :lat "44.876111" ;
+ :lon "40.059444" ;
+ :pop "13872" ;
+ :country :Россия .
+
+:Гиагинский_молочный_завод
+ :place :Гиагинская ;
+ :url "gmz.su" ;
+ :prod :Сыр_Адыгейский, :Сыр_Адыгейский_копченый, :Сыр_косичка, :Сулугуни, :Чечил ;
+ :start "1949" ;
+ :w "477" ;
+ rdf:type :ProductionUnit .
+
+:ГК_Белый_Медведь
+ rdf:type :Company .
+
+:Глазов
+ rdf:type :Place ;
+ :lat "58.140000" ;
+ :lon "52.646389" ;
+ :pop "92381" ;
+ :country :Россия .
+
+:Глазов-молоко
+ rdf:type :ProductionUnit ;
+ :place :Глазов ;
+ :company :Милком .
+
+:Глубокое_Витебская
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "55.138799" ;
+ :lon "27.685843" .
+
+:Глубокский_молочноконсервный_комбинат
+ :place :Глубокое_Витебская ;
+ :url "glmkk.by" ;
+ :prod :Молоко_сгущенное_частично_обезжиренное, :Молоко_сгущенное_с_фруктозой, :Масло_сливочное_крестьянское, :Масло_сладкосливочное, :Молоко_сгущенное, :Молоко_концентрированное, :Молоко_сгущенное_с_цикорием, :Молоко_сгущенное_с_кофе, :Сливки_сгущенные, :Молоко_сгущенное_Вишневая_сгущенка, :Молоко_сгущенное_с_какао, :Молоко_сгущенное_вареное, :Молоко_сгущенное_Арахисовая_сгущенка, :Молоко_сухое_частично_обезжиренное, :Молоко_сухое, :Сыворотка_молочная_сухая, :Добавка_лактулозосодержащая, :Сыр_творожный_соленый, :Сыр_с_ароматом_топленого_молока, :Сыр_Голландский, :Сыр_Российский, :Сыр_Мраморный, :Сыр_Сметанковый, :Сыр_Элегантный, :Сыр_Маасдам ;
+ :start "1972" ;
+ :w "1036" ;
+ rdf:type :ProductionUnit .
+
+:Гомель
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "52.425554" ;
+ :lon "31.019455" .
+
+:Городея
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.315278" ;
+ :lon "26.540438" .
+
+:Грайворон
+ rdf:type :Place ;
+ :lat "50.486111" ;
+ :lon "35.666389" ;
+ :pop "6506" ;
+ :country :Россия .
+
+:Греция
+ rdf:type :Country .
+
+:ГринАгро
+ :place :Артем ;
+ :url "green-agro.ru" ;
+ :w "163" ;
+ rdf:type :ProductionUnit .
+
+:Грузия
+ rdf:type :Country .
+
+:Грязовец
+ rdf:type :Place ;
+ :lat "58.875833" ;
+ :lon "40.248611" ;
+ :pop "14800" ;
+ :country :Россия .
+
+:Джелато_Шоколато
+ :place :Самара ;
+ :url "gelato-shokolato.ru" ;
+ :w "3" ;
+ rdf:type :ProductionUnit ;
+ :phone "89276027357" .
+
+:Дзержинск_Минская
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.685209" ;
+ :lon "27.131502" .
+
+:Диамед
+ :place :Санкт-Петербург ;
+ :url "diamed.biz" ;
+ :w "20" ;
+ rdf:type :ProductionUnit ;
+ :phone "8125355757" .
+
+:Дикси
+ rdf:type :Retailer ;
+ :url "dixy.ru" ;
+ :parent :Тандер .
+
+:Дитол
+ :place :Заневка ;
+ :url "gcditol.ru" ;
+ :w "6" ;
+ rdf:type :ProductionUnit .
+
+:Днепропетровск
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Добавка_лактулозосодержащая
+ rdf:type :FoodProduct ;
+ :broader :Пищевая_добавка .
+
+:Добрый_молочник
+ rdf:type :Trademark .
+
+:Долгопрудный
+ rdf:type :Place ;
+ :lat "55.933611" ;
+ :lon "37.514444" ;
+ :pop "90956" ;
+ :country :Россия .
+
+:Домик_в_деревне
+ rdf:type :Trademark .
+
+:Донецк
+ rdf:type :Place ;
+ :lat "48.3350928" ;
+ :lon "39.9460654" ;
+ :pop "50085" ;
+ :country :Россия .
+
+:Душанбе
+ :country :Таджикистан ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Европа
+ rdf:type :Retailer ;
+ :url "europa-ts.ru" .
+
+:Екатеринбург
+ rdf:type :Place ;
+ :lat "56.838611" ;
+ :lon "60.605556" ;
+ :pop "1515832" ;
+ :country :Россия .
+
+:Ереван
+ :country :Армения ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Жабинка
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "52.194346" ;
+ :lon "24.020061" .
+
+:Железноводск
+ rdf:type :Place ;
+ :lat "44.131944" ;
+ :lon "43.030556" ;
+ :pop "24950" ;
+ :country :Россия .
+
+:ЖК_Доронинский
+ :place :Завьялово_Новосибирская ;
+ :url "doroninskoe-shop.ru" ;
+ :w "104" ;
+ rdf:type :ProductionUnit .
+
+:Жлобин
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "52.892256" ;
+ :lon "30.037822" .
+
+:Жодино
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "54.094370" ;
+ :lon "28.321572" .
+
+:Завод_Карат
+ rdf:type :ProductionUnit ;
+ :place :Москва ;
+ :start "1934" ;
+ :tm :Violette, :Карат ;
+ :prod :Сыр_плавленый, :Сыр_творожный_сливочный, :Сыр_творожный_шоколадный, :Сыр_творожный, :Творог_зерненый, :Сыр_мягкий, :Творожок_с_ванилином, :Сыр_плавленый_консервированный, :Масло_сливочное_консервированное .
+
+:Завьялово_Новосибирская
+ rdf:type :Place ;
+ :lat "54.506111" ;
+ rdfs:label "Завьялово" ;
+ :lon "82.445556" ;
+ :pop "1234" ;
+ :country :Россия .
+
+:Залесский_фермер
+ :place :Полесск ;
+ :url "zalfermer.ru" ;
+ :w "192" ;
+ rdf:type :ProductionUnit ;
+ :phone "88007707785" .
+
+:Заневка
+ rdf:type :Place ;
+ :lat "59.937222" ;
+ :lon "30.514167" ;
+ :pop "1275" ;
+ :country :Россия .
+
+:ЗАО_СК_Ленинградский
+ rdf:type :Company .
+
+:Иван_Поддубный
+ rdf:type :Trademark .
+
+:Ивано-Франковск
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "48.922677" ;
+ :lon "24.711162" .
+
+:Иваново
+ rdf:type :Place ;
+ :lat "57.000278" ;
+ :lon "40.973889" ;
+ :pop "405053" ;
+ :country :Россия .
+
+:Ивановский_комбинат_детского_питания
+ :place :Иваново ;
+ :w "187" ;
+ rdf:type :ProductionUnit ;
+ :phone "84932311390" .
+
+:Ижевск
+ rdf:type :Place ;
+ :lat "56.849722" ;
+ :lon "53.207222" ;
+ :pop "648944" ;
+ :country :Россия .
+
+:Ижмолоко
+ rdf:type :ProductionUnit ;
+ :place :Ижевск ;
+ :company :Милком .
+
+:Избербаш
+ rdf:type :Place ;
+ :lat "42.565278" ;
+ :lon "47.871111" ;
+ :pop "58690" ;
+ :country :Россия .
+
+:Избербашский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Избербаш ;
+ :url "88724504771" .
+
+:Изделие_кондитерское
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Изделие_кулинарное
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Имунеле
+ rdf:type :Trademark .
+
+:Италия
+ rdf:type :Country .
+
+:Йогурт
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Йогурт_2_5
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_без_сахара
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_вишня
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_густой
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_клубника
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_клюква-земляника
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_малина-лимон
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_манго-апельсин
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_персик
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_питьевой
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йогурт_черника-голубика
+ rdf:type :FoodProduct ;
+ :broader :Йогурт .
+
+:Йошкар-Ола
+ rdf:type :Place ;
+ :lat "56.634444" ;
+ :lon "47.900000" ;
+ :pop "268277" ;
+ :country :Россия .
+
+:Кавказский_долгожитель
+ rdf:type :Trademark .
+
+:Кагальницкая
+ rdf:type :Place ;
+ :lat "46.880556" ;
+ :lon "40.149167" ;
+ :pop "5827" ;
+ :country :Россия .
+
+:Кагальницкий_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Кагальницкая ;
+ :url "kmz-moloko.com" .
+
+:Казанский_молочный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Казань ;
+ :company :Милком .
+
+:Казань
+ rdf:type :Place ;
+ :lat "55.798611" ;
+ :lon "49.106389" ;
+ :pop "1205651" ;
+ :country :Россия .
+
+:Казахстан
+ rdf:type :Country .
+
+:Казьминский_молочный_комбинат
+ :place :Невинномысск ;
+ :url "kazminmilk.ru" ;
+ :prod :Молоко, :Сметана, :Сыр_Гауда, :Ряженка, :Йогурт_вишня, :Йогурт_клубника, :Йогурт_клюква-земляника, :Йогурт_малина-лимон, :Йогурт_манго-апельсин, :Йогурт_черника-голубика, :Кефир_1, :Снежок_термостатный, :Варенец_термостатный, :Мацони_термостатный, :Сметана_термостатная, :Сметана_15, :Сметана_20, :Молоко_отборное, :Молоко_пастеризованное, :Кефир_2_5, :Простокваша ;
+ :start "2016" ;
+ :w "246" ;
+ rdf:type :ProductionUnit .
+
+:Каменка_Пензенская
+ rdf:type :Place ;
+ :lat "53.081944" ;
+ rdfs:label "Каменка" ;
+ :lon "46.505833" ;
+ :pop "556" ;
+ :country :Россия .
+
+:Каменский_маслозавод
+ :place :Каменка_Пензенская ;
+ :url "kmz58.ru" ;
+ :w "83" ;
+ rdf:type :ProductionUnit .
+
+:Карагач
+ rdf:type :Place ;
+ :lat "43.803333" ;
+ :lon "43.773611" ;
+ :pop "6035" ;
+ :country :Россия .
+
+:Карагачский_молокозавод
+ rdf:type :ProductionUnit ;
+ :place :Карагач ;
+ :url "domiknahutore.ru" .
+
+:Карат
+ rdf:type :Trademark .
+
+:Карусель
+ rdf:type :Retailer .
+
+:Катманду
+ :country :Непал ;
+ rdf:type :Place ;
+ :lat "27.703184" ;
+ :lon "85.315060" .
+
+:Качиорикотта
+ rdf:type :FoodProduct ;
+ :broader :Рикотта .
+
+:Кез
+ rdf:type :Place ;
+ :lat "57.896389" ;
+ :lon "53.713889" ;
+ :pop "10694" ;
+ :country :Россия .
+
+:Кезский_сырзавод
+ rdf:type :ProductionUnit ;
+ :place :Кез ;
+ :company :Милком .
+
+:Кефир
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Кефир_0_1
+ :fat "0.1" ;
+ rdf:type :FoodProduct ;
+ :broader :Кефир_обезжиренный ;
+ rdfs:label "Кефир 0.1%" .
+
+:Кефир_1
+ :fat "1" ;
+ rdf:type :FoodProduct ;
+ :broader :Кефир_обезжиренный ;
+ rdfs:label "Кефир 1%" .
+
+:Кефир_2_5
+ :fat "2.5" ;
+ rdf:type :FoodProduct ;
+ :broader :Кефир ;
+ rdfs:label "Кефир 2.5%" .
+
+:Кефир_3_2
+ :fat "3.2" ;
+ rdf:type :FoodProduct ;
+ :broader :Кефир ;
+ rdfs:label "Кефир 3.2%" .
+
+:Кефир_детский
+ rdf:type :FoodProduct ;
+ :broader :Кефир .
+
+:Кефир_обезжиренный
+ rdf:type :FoodProduct ;
+ :broader :Кефир .
+
+:Кефир_термостатный
+ rdf:type :FoodProduct ;
+ :broader :Кефир .
+
+:Киев
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Кизилюрт
+ rdf:type :Place ;
+ :lat "43.204722" ;
+ :lon "46.866944" ;
+ :pop "34420" ;
+ :country :Россия .
+
+:Кизилюртовский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Кизилюрт ;
+ :url "kolos-dagestan.ru" ;
+ :prod :Кефир, :Сметана, :Молоко, :Масло_сливочное, :Сыворотка, :Творог, :Сыр_рассольный .
+
+:Киприно
+ rdf:type :Company .
+
+:Кипринский_молочный_завод
+ :place :Барнаул ;
+ :company :Киприно ;
+ :prod :Молоко, :Сыр_Советский, :Сыр_алтайский, :Сыр_швейцарский, :Пармезан, :Чеддер, :Сыр_Молочный, :Сыр_Сливочный, :Сыр_Мастер, :Сыр_Российский, :Сыр_Киприно, :Сыр_Витязь, :Сыр_Сметанковый, :Сыр_Гауда, :Сыр_Тильзитер, :Сыр_Маасдам, :Сыр_плавленый, :Брынза, :Сыр_колбасный, :Сыр_Честор, :Масло_сливочное, :Масло_алтайское, :Масло_крестьянское, :Масло_советское ;
+ :start "2003" ;
+ :w "0.2К" ;
+ rdf:type :ProductionUnit .
+
+:Киргизия
+ rdf:type :Country .
+
+:Киржач
+ rdf:type :Place ;
+ :lat "56.161667" ;
+ :lon "38.871944" ;
+ :pop "27157" ;
+ :country :Россия .
+
+:Киржачский_молочный_завод
+ :place :Киржач ;
+ :url "km-zavod.ru" ;
+ :w "163" ;
+ rdf:type :ProductionUnit ;
+ :phone "84955454600" .
+
+:Кисловодск
+ rdf:type :Place ;
+ :lat "43.905278" ;
+ :lon "42.716667" ;
+ :pop "130007" ;
+ :country :Россия .
+
+:Кишинев
+ :country :Молдавия ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Козельск
+ rdf:type :Place ;
+ :lat "54.034722" ;
+ :lon "35.782222" ;
+ :pop "14447" ;
+ :country :Россия .
+
+:Козельский_молочный_завод
+ :place :Козельск ;
+ :url "af-optina.com" ;
+ :company :Агрофирма_Оптина ;
+ :w "253" ;
+ rdf:type :ProductionUnit ;
+ :phone "84993466454" .
+
+:Коктейль_молочный
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Колхоз_советинский
+ rdf:type :ProductionUnit ;
+ :place :Советка ;
+ :email "sovetinsky@mail.ru" ;
+ :prod :Масло_сливочное, :Творог, :Сметана, :Кефир, :Ряженка, :Снежок, :Масса_творожная .
+
+:Кольцово
+ rdf:type :Place ;
+ :lat "45.326667" ;
+ :lon "33.451389" ;
+ :pop "797" ;
+ :country :Россия .
+
+:Компания_Молоко
+ rdf:type :Company ;
+ :owns-tm :Отчизна .
+
+:Кореновск
+ rdf:type :Place ;
+ :lat "45.464167" ;
+ :lon "39.458889" ;
+ :pop "41770" ;
+ :country :Россия .
+
+:Кореновский_молочно-консервный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Кореновск ;
+ :url "kmkk.ru" ;
+ :company :Ренна ;
+ :start "1952" ;
+ :tm :Коровка_из_Кореновки ;
+ :prod :Молоко, :Молоко_сгущенное, :Сметана, :Йогурт, :Масло_сливочное, :Ряженка, :Кефир, :Мороженое, :Творог, :Сливки .
+
+:Коровка_из_Кореновки
+ rdf:type :Trademark .
+
+:Котовск
+ rdf:type :Place ;
+ :lat "52.593056" ;
+ :lon "41.505833" ;
+ :pop "29377" ;
+ :country :Россия .
+
+:Красногвардейский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Красногвардейское ;
+ :owns-tm :Унэ ;
+ :url "kmz01.com" ;
+ :prod :Сыр_Адыгейский, :Сыр_копченый, :Сыр_сухой, :Сулугуни, :Чечил_косичка, :Чечил ;
+ :start "1976" .
+
+:Красногвардейское
+ rdf:type :Place ;
+ :lat "45.144167" ;
+ :lon "39.590000" ;
+ :pop "9577" ;
+ :country :Россия .
+
+:Краснодар
+ rdf:type :Place ;
+ :lat "45.040278" ;
+ :lon "38.976111" ;
+ :pop "987828" ;
+ :country :Россия .
+
+:Красносулинский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Красный_Сулин ;
+ :owns-tm :Сулиночка ;
+ :url "молочныйзавод.рф" .
+
+:Красноуфимск
+ rdf:type :Place ;
+ :lat "56.617778" ;
+ :lon "57.770556" ;
+ :pop "38988" ;
+ :country :Россия .
+
+:Красноуфимский_молочный_завод
+ :place :Красноуфимск ;
+ rdf:type :ProductionUnit ;
+ :phone "83439424405" .
+
+:Красный_Сулин
+ rdf:type :Place ;
+ :lat "47.894722" ;
+ :lon "40.058056" ;
+ :pop "40919" ;
+ :country :Россия .
+
+:Крем_сливочный
+ rdf:type :FoodProduct ;
+ :broader :Сливки .
+
+:Кричев
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.695788" ;
+ :lon "31.706855" .
+
+:Кубанская_буренка
+ rdf:type :Trademark .
+
+:Кубанский_молочник
+ :place :Краснодар ;
+ :url "kubmol.ru" ;
+ :w "2" ;
+ rdf:type :ProductionUnit ;
+ :phone "88612200848" .
+
+:Кубанский_хуторок
+ rdf:type :Trademark .
+
+:Кувшиново
+ rdf:type :Place ;
+ :lat "57.026389" ;
+ :lon "34.167500" ;
+ :pop "8929" ;
+ :country :Россия .
+
+:Курган
+ rdf:type :Place ;
+ :lat "55.454444" ;
+ :lon "65.321944" ;
+ :pop "322042" ;
+ :country :Россия .
+
+:Курут
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сухой .
+
+:Латвия
+ rdf:type :Country .
+
+:Ленинградская
+ rdf:type :Place ;
+ :lat "46.319444" ;
+ :lon "39.387778" ;
+ :pop "36393" ;
+ :country :Россия .
+
+:Ленинградский_Хладокомбинат_N1
+ rdf:type :ProductionUnit ;
+ :place :Санкт-Петербург ;
+ :company :Food_Union ;
+ :vk "vk.com/hladokombinat1" ;
+ rdfs:label "Ленинградский Хладокомбинат №1" ;
+ :start "1935" .
+
+:Ленинск
+ rdf:type :Place ;
+ :lat "48.693611" ;
+ :lon "45.199167" ;
+ :pop "14626" ;
+ :country :Россия .
+
+:Ленинский_Молокозавод
+ rdf:type :ProductionUnit ;
+ :place :Ленинск .
+
+:Лента
+ rdf:type :Retailer .
+
+:Лианозовский_молочный_комбинат
+ :place :Москва ;
+ :company :PepsiCo ;
+ :prod :Молоко ;
+ :start "1989" ;
+ :w "2.2К" ;
+ rdf:type :ProductionUnit .
+
+:Лида
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.891667" ;
+ :lon "25.302254" .
+
+:Линия
+ rdf:type :Retailer ;
+ :url "linia-market.ru" .
+
+:Липецк
+ rdf:type :Place ;
+ :lat "52.604167" ;
+ :lon "39.593611" ;
+ :pop "509420" ;
+ :country :Россия .
+
+:Липецкий_Маслосырзавод
+ :place :Липецк ;
+ :url "lmsz.ru" ;
+ :prod :Сыр, :Моцарелла, :Сулугуни, :Сыр_творожный_Крем_Чиз, :Чечил_косичка_молочный, :Чечил_косичка_копченый, :Чечил_балык_молочный, :Чечил_нити, :Чечил_копченый, :Сыр_Бри, :Сыр_Камамбер, :Сливки_замороженные ;
+ :w "14" ;
+ rdf:type :ProductionUnit ;
+ :phone "84742556860" .
+
+:Лисичанск
+ :country :Россия ;
+ rdf:type :Place ;
+ :lat "48.912914" ;
+ :lon "38.419552" .
+
+:Литва
+ rdf:type :Country .
+
+:Луганск
+ :country :Россия ;
+ rdf:type :Place ;
+ :lat "48.573896" ;
+ :lon "39.307708" .
+
+:Львов
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Любучаны
+ rdf:type :Place ;
+ :lat "55.242222" ;
+ :lon "37.542778" ;
+ :pop "3378" ;
+ :country :Россия .
+
+:Магнит
+ rdf:type :Retailer ;
+ :url "magnit.ru" ;
+ :hq :Краснодар ;
+ :start "1994" ;
+ :parent :Тандер .
+
+:Магнолия
+ rdf:type :Retailer ;
+ :hq :Москва ;
+ :start "1992" .
+
+:Майкоп
+ rdf:type :Place ;
+ :lat "44.609722" ;
+ :lon "40.100556" ;
+ :pop "141970" ;
+ :country :Россия .
+
+:Майкопская_молочная_продукция
+ rdf:type :Trademark .
+
+:Майонез_сметанный
+ rdf:type :FoodProduct ;
+ :broader :Соус_молокосодержащий .
+
+:Максатиха
+ rdf:type :Place ;
+ :lat "57.793611" ;
+ :lon "35.875278" ;
+ :pop "7673" ;
+ :country :Россия .
+
+:Максатихинский_маслодельный_завод
+ :place :Максатиха ;
+ :url "maslo-zavod69.ru" ;
+ :w "125" ;
+ rdf:type :ProductionUnit ;
+ :phone "84825321090" .
+
+:Масло_алтайское
+ rdf:type :FoodProduct ;
+ :broader :Масло_сливочное .
+
+:Масло_кислосливочное
+ rdf:type :FoodProduct ;
+ :broader :Масло_сливочное .
+
+:Масло_сладкосливочное
+ rdf:type :FoodProduct ;
+ :broader :Масло_сливочное .
+
+:Масло_сливочное
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Масло_сливочное_консервированное
+ rdf:type :FoodProduct ;
+ :broader :Масло_сливочное .
+
+:Масло_сливочное_крестьянское
+ owl:sameAs :Масло_крестьянское, :Масло_сливочное_72_5 ;
+ :fat "72.5" ;
+ rdf:type :FoodProduct ;
+ :broader :Масло_сладкосливочное, :Масло_сливочное .
+
+:Масло_сливочное_любительское
+ owl:sameAs :Масло_любительское, :Масло_сливочное_80 ;
+ :fat "80" ;
+ rdf:type :FoodProduct ;
+ :broader :Масло_сладкосливочное .
+
+:Масло_сливочное_традиционное
+ owl:sameAs :Масло_традиционное, :Масло_сливочное_82_5 ;
+ :fat "82.5" ;
+ rdf:type :FoodProduct ;
+ :broader :Масло_сладкосливочное .
+
+:Масло_советское
+ rdf:type :FoodProduct ;
+ :broader :Масло_сливочное .
+
+:Масло_топленое
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Маслодельный_завод_Хвалынский
+ :place :Хвалынск ;
+ :url "hv-moloko.ru" ;
+ rdf:type :ProductionUnit ;
+ :phone "88459521739" .
+
+:Маслозавод_Нытвенский
+ :place :Нытва ;
+ :url "nytva-maslo.ru" ;
+ :w "618" ;
+ rdf:type :ProductionUnit ;
+ :phone "83427224141" .
+
+:Маслосырзавод_Новопокровский
+ rdf:type :ProductionUnit ;
+ :place :Новопокровка_Тамбовская ;
+ :url "novosyr.ru" ;
+ :prod :Сыр, :Масло_сливочное, :Сыворотка_подсырная_сухая .
+
+:Маслосырзавод_Славянский
+ rdf:type :ProductionUnit ;
+ :place :Славянск-на-Кубани ;
+ :url "slavia.pp.ru" .
+
+:Масса_творожная
+ rdf:type :FoodProduct ;
+ :broader :Творог .
+
+:Махачкала
+ rdf:type :Place ;
+ :lat "42.983056" ;
+ :lon "47.504722" ;
+ :pop "597316" ;
+ :country :Россия .
+
+:Махачкалинский_гормолзавод
+ :place :Махачкала ;
+ :prod :Творог, :Йогурт, :Масло_сливочное ;
+ rdf:type :ProductionUnit ;
+ :phone "88722674031", "88722673902" .
+
+:Мацони
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Мацони_термостатный
+ rdf:type :FoodProduct ;
+ :broader :Мацони .
+
+:Мацони_термостатный_2_5
+ rdf:type :FoodProduct ;
+ :broader :Мацони_термостатный .
+
+:Мелитополь
+ rdf:type :Place ;
+ :lat "46.842187" ;
+ :lon "35.372880" ;
+ :pop "149926" ;
+ :country :Россия .
+
+:Метрополис
+ rdf:type :Retailer .
+
+:Миленка
+ rdf:type :Trademark .
+
+:Милк_Каскад
+ :place :Москва ;
+ :w "10" ;
+ rdf:type :ProductionUnit ;
+ :phone "4952122366" .
+
+:Милком
+ rdf:type :Company .
+
+:Милком_Ижевск
+ :place :Ижевск ;
+ :url "milkom-komos.ru" ;
+ rdf:type :ProductionUnit ;
+ :phone "83412204953" .
+
+:Минск
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.902512" ;
+ :lon "27.561481" .
+
+:Могилев
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.894548" ;
+ :lon "30.330654" .
+
+:Модест
+ :place :Барнаул ;
+ rdf:type :ProductionUnit ;
+ :phone "83852438213" .
+
+:Можга
+ rdf:type :Place ;
+ :lat "56.442778" ;
+ :lon "52.213889" ;
+ :pop "49093" ;
+ :country :Россия .
+
+:Можгасыр
+ :place :Можга ;
+ :url "mozhgasyr.ru" ;
+ rdf:type :ProductionUnit ;
+ :phone "3413936806" .
+
+:Мозырь
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "52.049019" ;
+ :lon "29.267301" .
+
+:МолАгроТорг
+ :place :Саратов ;
+ :w "48" ;
+ rdf:type :ProductionUnit ;
+ :phone "88452621412" .
+
+:Молвест
+ rdf:type :Company .
+
+:Молдавия
+ rdf:type :Country .
+
+:Молзавод_Новый
+ rdf:type :ProductionUnit ;
+ :place :Новый_Адыгея ;
+ :url "novmz.ru" .
+
+:Молоко
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Молоко_Белевица
+ :place :Белевица ;
+ :url "moloko.group" ;
+ :company :Компания_Молоко ;
+ rdfs:label "Молоко" ;
+ :w "156" ;
+ rdf:type :ProductionUnit ;
+ :phone "89679683239" .
+
+:Молоко_восстановленное
+ rdf:type :FoodProduct ;
+ :broader :Молоко .
+
+:Молоко_Завод_по_изготовлению_смесей
+ rdf:type :ProductionUnit ;
+ :place :Белевица ;
+ :company :Компания_Молоко ;
+ :prod :Молоко_сухое, :Сливки_сухие ;
+ :start "2013" .
+
+:Молоко_Зауралья
+ :start "2000" ;
+ :w "225" ;
+ rdf:type :ProductionUnit ;
+ :place :Курган ;
+ :retail :Магнит, :Пятерочка, :Лента, :Монетка, :Метрополис ;
+ :vk "vk.com/moloko_zauralya" ;
+ :prod :Молоко .
+
+:Молоко_консервированное
+ rdf:type :FoodProduct ;
+ :broader :Молоко .
+
+:Молоко_концентрированное
+ rdf:type :FoodProduct ;
+ :broader :Молоко_консервированное .
+
+:Молоко_Масло-сырный_производственный_комплекс
+ rdf:type :ProductionUnit ;
+ :place :Белевица ;
+ :company :Компания_Молоко ;
+ :prod :Сыр, :Масло_сливочное ;
+ :start "2018" .
+
+:Молоко_отборное
+ rdf:type :FoodProduct ;
+ :broader :Молоко .
+
+:Молоко_пастеризованное
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Молоко .
+
+:Молоко_пастеризованное_1
+ owl:sameAs :Молоко_1 ;
+ rdf:type :FoodProduct ;
+ :broader :Молоко_пастеризованное .
+
+:Молоко_пастеризованное_2_5
+ owl:sameAs :Молоко_2_5 ;
+ rdf:type :FoodProduct ;
+ :broader :Молоко_пастеризованное .
+
+:Молоко_пастеризованное_3_2
+ owl:sameAs :Молоко_3_2 ;
+ rdf:type :FoodProduct ;
+ :broader :Молоко_пастеризованное .
+
+:Молоко_пастеризованное_обогащенное
+ rdf:type :FoodProduct ;
+ :broader :Молоко_пастеризованное .
+
+:Молоко_сгущенное
+ rdf:type :FoodProduct ;
+ :broader :Молоко_консервированное .
+
+:Молоко_сгущенное_Арахисовая_сгущенка
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_сгущенное_вареное
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_сгущенное_Вишневая_сгущенка
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_сгущенное_с_какао
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_сгущенное_с_кофе
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_сгущенное_с_фруктозой
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_сгущенное_с_цикорием
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_сгущенное_частично_обезжиренное
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное .
+
+:Молоко_стерилизованное
+ rdf:type :FoodProduct ;
+ :broader :Молоко .
+
+:Молоко_сухое
+ rdf:type :FoodProduct ;
+ :broader :Молоко .
+
+:Молоко_сухое_обезжиренное
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сухое .
+
+:Молоко_сухое_частично_обезжиренное
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сухое_обезжиренное .
+
+:Молоко_топленое
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Молоко .
+
+:Молоко_топленое_3_2
+ rdf:type :FoodProduct ;
+ :broader :Молоко_топленое .
+
+:Молоко_ультрапастеризованное
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Молоко_пастеризованное .
+
+:Молоко_ультрапастеризованное_1_5
+ rdf:type :FoodProduct ;
+ :broader :Молоко_ультрапастеризованное .
+
+:Молоко_ультрапастеризованное_2_5
+ rdf:type :FoodProduct ;
+ :broader :Молоко_ультрапастеризованное .
+
+:Молоко_ультрапастеризованное_3_2
+ rdf:type :FoodProduct ;
+ :broader :Молоко_ультрапастеризованное .
+
+:Молоко_цельное
+ rdf:type :FoodProduct ;
+ :broader :Молоко .
+
+:Молочная_Культура
+ :url "dairyculture.ru" ;
+ :w "112" ;
+ rdf:type :ProductionUnit .
+
+:Молочное
+ rdf:type :Place ;
+ :lat "59.290556" ;
+ :lon "39.675833" ;
+ :pop "8242" ;
+ :country :Россия .
+
+:Молочный_завод_Мясниковский
+ rdf:type :ProductionUnit ;
+ :place :Чалтырь ;
+ :company :ГК_Белый_Медведь .
+
+:Молочный_завод_Рязанский
+ :place :Рязанская ;
+ :email "mryzanskii@yandex.ru" ;
+ :prod :Молоко ;
+ rdf:type :ProductionUnit ;
+ :phone "89184285989" .
+
+:Молочный_завод_Хладонеж
+ rdf:type :ProductionUnit ;
+ :place :Кисловодск ;
+ :url "хладонеж.рф" .
+
+:Молочный_завод_Ярославский
+ rdf:type :ProductionUnit ;
+ :place :Ярославская ;
+ :email "ooo_yaroslav.09@mail.ru" ;
+ :prod :Сулугуни, :Брынза, :Чечил, :Чечил_косичка, :Чечил_нити, :Масло_сливочное .
+
+:Молочный_комбинат_Авида
+ :place :Старый_Оскол ;
+ :url "мк-авида.рф" ;
+ :prod :Биойогурт, :Молоко_пастеризованное_2_5, :Молоко_пастеризованное_3_2, :Молоко_топленое_3_2, :Молоко_ультрапастеризованное_1_5, :Молоко_ультрапастеризованное_2_5, :Молоко_ультрапастеризованное_3_2, :BioMatrix, :Снежок_2_5, :Ряженка_3_2, :Кефир_1, :Кефир_2_5, :Кефир_3_2 ;
+ :start "1996" ;
+ :w "479" ;
+ rdf:type :ProductionUnit ;
+ :phone "4725429328" .
+
+:Молочный_комбинат_Воронежский
+ :place :Воронеж ;
+ :url "molvest.ru" ;
+ :company :Молвест ;
+ :w "1564" ;
+ rdf:type :ProductionUnit ;
+ :phone "88007008181" ;
+ :tm :Вкуснотеево, :Иван_Поддубный, :Волжские_просторы, :Кубанский_хуторок ;
+ :prod :Молоко_пастеризованное, :Молоко_ультрапастеризованное, :Молоко_цельное, :Молоко_топленое, :Сливки_ультрапастеризованные, :Биокефир, :Кефир_1, :Ряженка_2_5, :Крем_сливочный, :Йогурт_густой, :Творог_обезжиренный, :Сырок_глазированный, :Масса_творожная, :Сыр_Сливочный, :Сыр_Тильзитер, :Сыр_Российский, :Сыр_Калачеевский, :Сыр_выдержанный, :Масло_сливочное_традиционное, :Сметана_15, :Творог_5, :Сыр_Любимый, :Сулугуни, :Кефир_детский, :Йогурт_питьевой, :Кефир_2_5, :Молоко_2_5, :Сметана_20, :Творог_0_5, :Творог_9, :Молоко_пастеризованное_обогащенное, :Кефир_0_1, :Бифилюкс, :Творог_0_3, :Сливки_10, :Масло_сливочное_72_5, :Моцарелла, :Буррата .
+
+:Молочный_комбинат_Петмол
+ rdf:type :ProductionUnit ;
+ :place :Санкт-Петербург ;
+ :url "petmol.ru" ;
+ :prod :Молоко ;
+ :start "1934" .
+
+:Молочный_комбинат_Ялуторовский
+ rdf:type :ProductionUnit ;
+ :place :Ялуторовск ;
+ :company :Danone ;
+ :prod :Молоко ;
+ :start "1936" .
+
+:МолПромКубань
+ rdf:type :ProductionUnit ;
+ :place :Армавир ;
+ :url "molpromkuban.ru" .
+
+:Молсыркомбинат_Волжский
+ rdf:type :ProductionUnit ;
+ :place :Волжский ;
+ :url "molzavod-vlz.ru" .
+
+:Монетка
+ rdf:type :Retailer ;
+ :hq :Екатеринбург ;
+ :start "2001" .
+
+:Мороженое
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Мороженое_цветное
+ rdf:type :FoodProduct ;
+ :broader :Мороженое .
+
+:Москва
+ rdf:type :Place ;
+ :lat "55.753889" ;
+ :lon "37.620278" ;
+ :pop "11801572" ;
+ :country :Россия .
+
+:Московский_жировой_комбинат
+ :place :Москва ;
+ :company :Русагро ;
+ :prod :Сливки_пастеризованные, :Масло_сливочное, :Молоко_сухое_обезжиренное ;
+ :start "1935" ;
+ :w "350" ;
+ rdf:type :ProductionUnit .
+
+:Моцарела_буфалина
+ rdf:type :FoodProduct ;
+ :broader :Моцарелла .
+
+:Моцарелла
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский, :Сыр_вытяжной .
+
+:Моцарелла_классическая
+ owl:sameAs :Mozzarella_di_bufala_campana ;
+ rdf:type :FoodProduct ;
+ :broader :Моцарелла .
+
+:МПК_7утра
+ rdf:type :ProductionUnit ;
+ :place :Воронеж ;
+ :company :7утра ;
+ :prod :Молоко .
+
+:Мытищи
+ rdf:type :Place ;
+ :lat "55.909444" ;
+ :lon "37.733889" ;
+ :pop "173160" ;
+ :country :Россия .
+
+:Нальчик
+ rdf:type :Place ;
+ :lat "43.485278" ;
+ :lon "43.606944" ;
+ :pop "239300" ;
+ :country :Россия .
+
+:Нальчикский_молочный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Нальчик ;
+ :owns-tm :Чабан ;
+ :url "nmk.ru" ;
+ :vk "vk.com/nmkmilk" .
+
+:Наровля
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "51.797456" ;
+ :lon "29.506747" .
+
+:Наша_Малаша
+ rdf:type :Trademark .
+
+:Невинномысск
+ rdf:type :Place ;
+ :lat "44.638333" ;
+ :lon "41.936111" ;
+ :pop "117868" ;
+ :country :Россия .
+
+:Непал
+ rdf:type :Country .
+
+:Нидерланды
+ rdf:type :Country .
+
+:Нижегородский_масложировой_комбинат
+ :place :Нижний_Новгород ;
+ :url "www.nmgk.ru" ;
+ rdf:type :ProductionUnit ;
+ :phone "88002500007" .
+
+:Нижний_Новгород
+ rdf:type :Place ;
+ :lat "56.326944" ;
+ :lon "44.006111" ;
+ :pop "1276560" ;
+ :country :Россия .
+
+:Николаев
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Николаевская_ферма
+ :place :Кувшиново ;
+ :url "никоферма.рф" ;
+ :w "60" ;
+ rdf:type :ProductionUnit ;
+ :phone "84822646644" .
+
+:Николаевские_сыроварни
+ rdf:type :ProductionUnit ;
+ :place :Выселки ;
+ :url "nikolaevskie.com" ;
+ :company :Агрокомплекс_Выселковский .
+
+:Новоалтайск
+ rdf:type :Place ;
+ :lat "53.411944" ;
+ :lon "83.931111" ;
+ :pop "73769" ;
+ :country :Россия .
+
+:Новопокровка_Тамбовская
+ rdf:type :Place ;
+ :lat "52.135000" ;
+ rdfs:label "Новопокровка" ;
+ :lon "40.879167" ;
+ :pop "1643" ;
+ :country :Россия .
+
+:Новополоцк
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "55.535289" ;
+ :lon "28.645541" .
+
+:Новосибирск
+ rdf:type :Place ;
+ :lat "55.028333" ;
+ :lon "82.923333" ;
+ :pop "1618039" ;
+ :country :Россия .
+
+:Новосибирский_хладокомбинат
+ rdf:type :ProductionUnit ;
+ :place :Новосибирск ;
+ :url "novosibholod.ru" ;
+ :prod :Мороженое ;
+ :start "1960" .
+
+:Новочеркасск
+ rdf:type :Place ;
+ :lat "47.411944" ;
+ :lon "40.104167" ;
+ :pop "168766" ;
+ :country :Россия .
+
+:Новочеркасский_молочный_завод
+ :end "2012" ;
+ :place :Новочеркасск ;
+ :prod :Продукт_молочный ;
+ :start "1965" ;
+ :w "350" ;
+ rdf:type :ProductionUnit .
+
+:Новый_Адыгея
+ rdf:type :Place ;
+ :lat "45.005556" ;
+ rdfs:label "Новый" ;
+ :lon "38.976667" ;
+ :pop "2173" ;
+ :country :Россия .
+
+:Норвегия
+ rdf:type :Country .
+
+:Нытва
+ rdf:type :Place ;
+ :lat "57.939167" ;
+ :lon "55.328611" ;
+ :pop "18765" ;
+ :country :Россия .
+
+:Огонек_Эконом
+ rdf:type :Retailer ;
+ :url "ogonek68.ru" ;
+ :vk "vk.com/ogonek68" .
+
+:ОКей
+ rdf:type :Retailer ;
+ rdfs:label "О'Кей" .
+
+:Омичка
+ rdf:type :Trademark .
+
+:Омск
+ rdf:type :Place ;
+ :lat "54.992222" ;
+ :lon "73.368333" ;
+ :pop "1178391" ;
+ :country :Россия .
+
+:Омский_завод_плавленых_сыров
+ rdf:type :ProductionUnit ;
+ :place :Омск ;
+ :company :Ястро ;
+ :start "1939" ;
+ :tm :Омичка ;
+ :prod :Сыр_плавленый .
+
+:Ополье
+ :place :Боголюбово ;
+ :w "261" ;
+ rdf:type :ProductionUnit .
+
+:Орeлмасло
+ rdf:type :ProductionUnit ;
+ :place :Орел ;
+ :url "orelmaslo.ru" ;
+ :start "1898" .
+
+:Орел
+ rdf:type :Place ;
+ :lat "59.340278" ;
+ :lon "56.587500" ;
+ :pop "1785" ;
+ :country :Россия .
+
+:Орловский
+ rdf:type :Place ;
+ :lat "46.873056" ;
+ :lon "42.055556" ;
+ :pop "18870" ;
+ :country :Россия .
+
+:Орловский_молочный_завод
+ :place :Орловский ;
+ :email "orlmolzavod@mail.ru" ;
+ :prod :Йогурт, :Сметана, :Масло_сливочное, :Творог, :Сыр_Костромской, :Сыр_плавленый, :Брынза ;
+ rdf:type :ProductionUnit ;
+ :phone "88637532736" .
+
+:Орша
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "54.510741" ;
+ :lon "30.429586" .
+
+:Останкинский_молочный_комбинат
+ :end "2020" ;
+ :place :Москва ;
+ :url "omk-moloko.ru" ;
+ :prod :Молоко ;
+ :start "1955" ;
+ :w "844" ;
+ rdf:type :ProductionUnit .
+
+:Островец
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "54.615366" ;
+ :lon "25.958338" .
+
+:Отчизна
+ rdf:type :Trademark .
+
+:Палочка_сырная
+ rdf:type :FoodProduct ;
+ :broader :Изделие_кулинарное .
+
+:Пармезан
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Пенза
+ rdf:type :Place ;
+ :lat "53.200000" ;
+ :lon "45.000000" ;
+ :pop "522317" ;
+ :country :Россия .
+
+:Пензахолод
+ :place :Пенза ;
+ :url "penzaholod.com" ;
+ :w "50" ;
+ rdf:type :ProductionUnit ;
+ :phone "89603235801" .
+
+:Перекресток
+ rdf:type :Retailer ;
+ :parent :X5 .
+
+:Пермский_хладокомбинат_Созвездие
+ rdf:type :ProductionUnit ;
+ :place :Пермь ;
+ :company :Милком .
+
+:Пермь
+ rdf:type :Place ;
+ :lat "58.010278" ;
+ :lon "56.234167" ;
+ :pop "1048011" ;
+ :country :Россия .
+
+:ПиР-ПАК
+ rdf:type :ProductionUnit ;
+ :place :Поселок_совхоза_им_Ленина ;
+ :url "pirpak.ru" ;
+ :tm :Светаево ;
+ :prod :Сыр_Голландский .
+
+:Пирамида
+ :country :Норвегия ;
+ rdf:type :Place ;
+ :lat "78.655880" ;
+ :lon "16.326162" .
+
+:Пискаревский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Санкт-Петербург ;
+ :url "klever.ru" .
+
+:Пищевая_добавка
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Плавия
+ rdf:type :Trademark .
+
+:Пломбир
+ rdf:type :FoodProduct ;
+ :broader :Мороженое .
+
+:Пломбир_брикет
+ rdf:type :FoodProduct ;
+ :broader :Пломбир .
+
+:Пломбир_в_ванночке
+ rdf:type :FoodProduct ;
+ :broader :Пломбир .
+
+:Пломбир_в_вафельном_стаканчике
+ rdf:type :FoodProduct ;
+ :broader :Пломбир .
+
+:Пломбир_ванильный
+ rdf:type :FoodProduct ;
+ :broader :Пломбир .
+
+:Пломбир_шоколадный
+ rdf:type :FoodProduct ;
+ :broader :Пломбир .
+
+:Победа
+ rdf:type :Retailer ;
+ :url "магазинпобеда.рф" ;
+ :vk "vk.com/magazinpobeda" ;
+ :hq :Ульяновск ;
+ :start "2015" .
+
+:Покровская_сыроварня
+ rdf:type :ProductionUnit ;
+ :place :Новоалтайск ;
+ :url "altai-cheese.com" .
+
+:Полесск
+ rdf:type :Place ;
+ :lat "54.862778" ;
+ :lon "21.110000" ;
+ :pop "6586" ;
+ :country :Россия .
+
+:Полуфабрикат
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Поселок_совхоза_им_Ленина
+ rdf:type :Place ;
+ :lat "55.585278" ;
+ rdfs:label "Поселок совхоза им. Ленина" ;
+ :lon "37.731111" ;
+ :pop "3964" ;
+ :country :Россия .
+
+:Предприятие_Сыр-Молоко
+ :place :Грайворон ;
+ :sid "Грайворонский_молокозавод" ;
+ rdf:type :ProductionUnit ;
+ :phone "84726146178" .
+
+:Преображенский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :url "syrki.ru" ;
+ :tm :Ягодный_край ;
+ :start "1996" ;
+ :place :Москва ;
+ :retail :Пятерочка .
+
+:Престиж
+ rdf:type :ProductionUnit ;
+ :url "prestige-desserts.ru" .
+
+:Приволье
+ :place :Славянск-на-Кубани ;
+ :url "agro-privolie.ru" ;
+ :w "8" ;
+ rdf:type :ProductionUnit .
+
+:Приднестровье
+ rdf:type :Country .
+
+:Приморско-Ахтарск
+ rdf:type :Place ;
+ :lat "46.051667" ;
+ :lon "38.170556" ;
+ :pop "32180" ;
+ :country :Россия .
+
+:Приморско-Ахтарский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Приморско-Ахтарск ;
+ :owns-tm :Твороговъ ;
+ :url "творогов.рф" .
+
+:Примосале
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский, :Сыр_свежий .
+
+:Провола_аффумиката
+ rdf:type :FoodProduct ;
+ :broader :Сыр_копченый, :Сыр_итальянский .
+
+:Прогресс
+ :place :Москва ;
+ :url "progressfood.ru" ;
+ :w "2100" ;
+ rdf:type :ProductionUnit ;
+ :phone "88002001400" .
+
+:Продукт_кисломолочный
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Продукт_молочный
+ rdf:type :FoodProduct ;
+ :note "Разбивка по жирности" .
+
+:Промконсервы
+ :place :Рудня ;
+ rdf:type :ProductionUnit ;
+ :phone "84814141959" ;
+ :tm :Наша_Малаша ;
+ :prod :Молоко_сгущенное .
+
+:Простокваша
+ rdf:type :FoodProduct ;
+ :broader :Продукт_кисломолочный .
+
+:Пугачев
+ rdf:type :Place ;
+ :lat "52.015833" ;
+ :lon "48.797222" ;
+ :pop "40905" ;
+ :country :Россия .
+
+:Пугачевские_молочные_продукты
+ rdf:type :ProductionUnit ;
+ :place :Пугачев ;
+ :url "pmpmilk.ru" .
+
+:Пучеж
+ rdf:type :Place ;
+ :lat "56.982222" ;
+ :lon "43.168333" ;
+ :pop "7078" ;
+ :country :Россия .
+
+:Пучежский_сыродельный_завод
+ :place :Пучеж ;
+ :url "puchezh-cheese.ru" ;
+ :start "1974" ;
+ :w "36" ;
+ rdf:type :ProductionUnit .
+
+:Пушкино
+ rdf:type :Place ;
+ :lat "56.009167" ;
+ :lon "37.852778" ;
+ :pop "102874" ;
+ :country :Россия .
+
+:Пушкиногорский_маслодельно-сыродельный_завод
+ :place :Селихново ;
+ :url "selikhnovo.ru" ;
+ :w "248" ;
+ rdf:type :ProductionUnit ;
+ :phone "89118881124" .
+
+:Пятерочка
+ rdf:type :Retailer ;
+ :parent :X5 .
+
+:Пятигорск
+ rdf:type :Place ;
+ :lat "44.039722" ;
+ :lon "43.070833" ;
+ :pop "145971" ;
+ :country :Россия .
+
+:Пятигорский_молочный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Пятигорск ;
+ :url "afsv.ru" .
+
+:Ренна
+ rdf:type :Company .
+
+:Республиканский_молочный_завод_Йошкар-Ола
+ :place :Йошкар-Ола ;
+ :url "rmz-12.ru" ;
+ :w "1" ;
+ rdf:type :ProductionUnit .
+
+:Рига
+ :country :Латвия ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Рикотта
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский, :Сыр_свежий, :Сыр_сывороточный .
+
+:Родной_Дом
+ :place :Таширово ;
+ :url "ferma-rodnoydom.ru" ;
+ rdf:type :ProductionUnit ;
+ :phone "89653675740" .
+
+:Россия
+ rdf:type :Country .
+
+:Ростов-на-Дону
+ rdf:type :Place ;
+ :lat "47.222500" ;
+ :lon "39.718611" ;
+ :pop "1125299" ;
+ :country :Россия .
+
+:Ростовский_завод_плавленных_сыров
+ rdf:type :ProductionUnit ;
+ :place :Ростов-на-Дону ;
+ :url "plavsyr.ru" .
+
+:Рудня
+ rdf:type :Place ;
+ :lat "54.947222" ;
+ :lon "31.091944" ;
+ :pop "9484" ;
+ :country :Россия .
+
+:Русагро
+ owl:sameAs :РусАгро ;
+ rdf:type :Company .
+
+:Рыжово
+ :country :Россия ;
+ rdf:type :Place ;
+ :lat "55.356805" ;
+ :lon "37.162405" .
+
+:Ряженка
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Ряженка_2_5
+ :fat "2.5" ;
+ rdf:type :FoodProduct ;
+ :broader :Ряженка .
+
+:Ряженка_3_2
+ :fat "3.2" ;
+ rdf:type :FoodProduct ;
+ :broader :Ряженка .
+
+:Рязанская
+ rdf:type :Place ;
+ :lat "44.959444" ;
+ :lon "39.584167" ;
+ :pop "5512" ;
+ :country :Россия .
+
+:Савушкин_продукт
+ rdf:type :Company .
+
+:Сальск
+ rdf:type :Place ;
+ :lat "46.475278" ;
+ :lon "41.541111" ;
+ :pop "58680" ;
+ :country :Россия .
+
+:Сальское_молоко
+ rdf:type :ProductionUnit ;
+ :place :Сальск ;
+ :url "salskoe-moloko.tiu.ru" .
+
+:Самара
+ rdf:type :Place ;
+ :lat "53.195556" ;
+ :lon "50.101667" ;
+ :pop "1156608" ;
+ :country :Россия .
+
+:Самокат
+ rdf:type :Retailer .
+
+:Санкт-Петербург
+ rdf:type :Place ;
+ :lat "59.939167" ;
+ :lon "30.315833" ;
+ :pop "5750134" ;
+ :country :Россия .
+
+:Сараи
+ rdf:type :Place ;
+ :lat "53.730278" ;
+ :lon "41.001389" ;
+ :pop "5143" ;
+ :country :Россия .
+
+:Сарапул
+ rdf:type :Place ;
+ :lat "56.477222" ;
+ :lon "53.819167" ;
+ :pop "96361" ;
+ :country :Россия .
+
+:Сарапул_молоко
+ rdf:type :ProductionUnit ;
+ :place :Сарапул ;
+ :company :Милком ;
+ :vk "vk.com/sarapulmoloko" ;
+ :tm :Село_Зеленое, :Топтыжка ;
+ :prod :Молоко_ультрапастеризованное, :Коктейль_молочный .
+
+:Саратов
+ rdf:type :Place ;
+ :lat "51.533056" ;
+ :lon "46.034167" ;
+ :pop "840785" ;
+ :country :Россия .
+
+:Сатурн
+ rdf:type :ProductionUnit ;
+ :place :Адыге-Хабль ;
+ :owns-tm :Кавказский_долгожитель, :Добрый_молочник, :Бабулины_продукты, :Миленка, :Вдоволь ;
+ :url "satum-milk.ru" ;
+ :vk "vk.com/saturn_milk" .
+
+:Свежая_марка
+ rdf:type :Trademark .
+
+:Светаево
+ rdf:type :Trademark .
+
+:Светофор
+ rdf:type :Retailer .
+
+:Северное_Молоко
+ :place :Грязовец ;
+ :url "milk35.ru" ;
+ :w "450" ;
+ rdf:type :ProductionUnit ;
+ :phone "88005505335" .
+
+:Селихново
+ rdf:type :Place ;
+ :lat "57.690833" ;
+ :lon "28.911944" ;
+ :pop "161" ;
+ :country :Россия .
+
+:Село_Зеленое
+ rdf:type :Trademark .
+
+:Семикаракорск
+ rdf:type :Place ;
+ :lat "47.517778" ;
+ :lon "40.811389" ;
+ :pop "22307" ;
+ :country :Россия .
+
+:Семикаракорский_сыродельный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Семикаракорск ;
+ :url "semik-sk.ru" .
+
+:Сернур
+ rdf:type :Place ;
+ :lat "56.933889" ;
+ :lon "49.148611" ;
+ :pop "10581" ;
+ :country :Россия .
+
+:Сернурский_Сырзавод
+ :place :Йошкар-Ола ;
+ :url "kozi.ru" ;
+ :w "459" ;
+ rdf:type :ProductionUnit .
+
+:Сернурский_сырзавод
+ rdf:type :ProductionUnit ;
+ :url "sernur.ru" ;
+ :prod :Сыр_Голландский ;
+ :place :Сернур ;
+ :retail :ВкусВилл .
+
+:Сибирский_завод_молочных_продуктов
+ :place :Бердск ;
+ :url "snegovichok.su" ;
+ :w "66" ;
+ rdf:type :ProductionUnit ;
+ :phone "83832581900" .
+
+:СибХолод
+ :place :Омск ;
+ :url "sibxolod.ru" ;
+ rdf:type :ProductionUnit ;
+ :phone "83812367134" .
+
+:Синицинский_перерабатывающий_комплекс
+ rdf:type :ProductionUnit ;
+ :place :Воля ;
+ :company :7утра ;
+ :prod :Молоко .
+
+:Скаморца
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский .
+
+:Скаморца_аффумиката
+ rdf:type :FoodProduct ;
+ :broader :Сыр_копченый, :Скаморца .
+
+:Скидель
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.590262" ;
+ :lon "24.250686" .
+
+:Скит
+ :place :Москва ;
+ :url "skitcom.ru" ;
+ :w "206" ;
+ rdf:type :ProductionUnit ;
+ :phone "84953215101" .
+
+:Славянск-на-Кубани
+ rdf:type :Place ;
+ :lat "45.260556" ;
+ :lon "38.126111" ;
+ :pop "63283" ;
+ :country :Россия .
+
+:Сладо
+ :place :Москва ;
+ :url "sweetwork.ru" ;
+ :w "2" ;
+ rdf:type :ProductionUnit ;
+ :phone "84955405029" .
+
+:Сливки
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Молоко .
+
+:Сливки_10
+ rdf:type :FoodProduct ;
+ :broader :Сливки .
+
+:Сливки_замороженные
+ rdf:type :FoodProduct ;
+ :broader :Полуфабрикат .
+
+:Сливки_пастеризованные
+ rdf:type :FoodProduct ;
+ :broader :Сливки .
+
+:Сливки_сгущенные
+ rdf:type :FoodProduct ;
+ :broader :Молоко_сгущенное, :Сливки .
+
+:Сливки_сухие
+ rdf:type :FoodProduct ;
+ :broader :Сливки .
+
+:Сливки_ультрапастеризованные
+ rdf:type :FoodProduct ;
+ :broader :Сливки_пастеризованные .
+
+:Сливочная_страна
+ rdf:type :ProductionUnit ;
+ :place :Мытищи ;
+ :url "slstrana.ru" ;
+ :prod :Масло_сливочное .
+
+:Слуцк
+ :country :Беларусь ;
+ rdf:type :Place ;
+ :lat "53.027644" ;
+ :lon "27.552111" .
+
+:Сметана
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Сметана_15
+ :fat "15" ;
+ rdf:type :FoodProduct ;
+ :broader :Сметана .
+
+:Сметана_20
+ :fat "20" ;
+ rdf:type :FoodProduct ;
+ :broader :Сметана .
+
+:Сметана_термостатная
+ rdf:type :FoodProduct ;
+ :broader :Сметана .
+
+:Снежана
+ rdf:type :Trademark .
+
+:Снежок
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Снежок_2_5
+ rdf:type :FoodProduct ;
+ :broader :Снежок .
+
+:Снежок_термостатный
+ rdf:type :FoodProduct ;
+ :broader :Снежок .
+
+:Советка
+ rdf:type :Place ;
+ :lat "47.506389" ;
+ :lon "39.250556" ;
+ :pop "954" ;
+ :country :Россия .
+
+:Соус_молокосодержащий
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Стамбул
+ :country :Турция ;
+ rdf:type :Place ;
+ :lat "41.011218" ;
+ :lon "28.978178" .
+
+:Старобельск
+ :country :Россия ;
+ rdf:type :Place ;
+ :lat "49.282243" ;
+ :lon "38.897393" .
+
+:Старый_Оскол
+ rdf:type :Place ;
+ :lat "51.298056" ;
+ :lon "37.833333" ;
+ :pop "231864" ;
+ :country :Россия .
+
+:Страккино
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский, :Сыр_свежий .
+
+:Страчателла
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский .
+
+:Суздаль
+ rdf:type :Place ;
+ :lat "56.419722" ;
+ :lon "40.449444" ;
+ :pop "9749" ;
+ :country :Россия .
+
+:Суздальский_молочный_завод
+ :place :Суздаль ;
+ :url "smzsuzdal.ru" ;
+ :w "141" ;
+ rdf:type :ProductionUnit ;
+ :phone "84923121934" .
+
+:Сулиночка
+ rdf:type :Trademark .
+
+:Султаново
+ rdf:type :Place ;
+ :lat "55.632500" ;
+ :lon "61.784444" ;
+ :pop "289" ;
+ :country :Россия .
+
+:Султановская_сыроварня
+ :place :Султаново ;
+ :email "cheese.sultanovo.trade@mail.ru" ;
+ :prod :Сыр ;
+ rdf:type :ProductionUnit ;
+ :phone "89193464945" .
+
+:Сулугуни
+ rdf:type :FoodProduct ;
+ :broader :Сыр_рассольный .
+
+:Сулугуни_копченый
+ rdf:type :FoodProduct ;
+ :broader :Сулугуни .
+
+:Сухум
+ :country :Абхазия ;
+ rdf:type :Place ;
+ :lat "43.003852" ;
+ :lon "41.019151" .
+
+:США
+ rdf:type :Country .
+
+:Сыворотка
+ rdf:type :FoodProduct ;
+ :broader :Пищевая_добавка .
+
+:Сыворотка_молочная
+ rdf:type :FoodProduct ;
+ :broader :Сыворотка .
+
+:Сыворотка_молочная_сухая
+ rdf:type :FoodProduct ;
+ :broader :Сыворотка_молочная .
+
+:Сыворотка_молочная_сухая_деминерализованная
+ rdf:type :FoodProduct ;
+ :broader :Сыворотка_молочная_сухая .
+
+:Сыворотка_подсырная_сухая
+ rdf:type :FoodProduct ;
+ :broader :Сыворотка .
+
+:Сыр
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Сыр_Адыгейский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_свежий .
+
+:Сыр_Адыгейский_жареный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_жареный .
+
+:Сыр_Адыгейский_копченый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_копченый .
+
+:Сыр_алтайский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Сыр_Бри
+ rdf:type :FoodProduct ;
+ :broader :Сыр_мягкий .
+
+:Сыр_Витязь
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_выдержанный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сычужный .
+
+:Сыр_вытяжной
+ owl:sameAs :Паста_филата ;
+ rdf:type :FoodProduct ;
+ :broader :Сыр_свежий .
+
+:Сыр_Гауда
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Голландский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_голландского_типа .
+
+:Сыр_голландского_типа
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Сыр_жареный
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_итальянский
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_Калачеевский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Камамбер
+ rdf:type :FoodProduct ;
+ :broader :Сыр_мягкий .
+
+:Сыр_Киприно
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_кисломолочный
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_козий
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_козий_копченый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_козий .
+
+:Сыр_колбасный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_плавленый .
+
+:Сыр_копченый
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_коровий
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_Королевский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Королевский_с_ароматом_топленого_молока
+ rdf:type :FoodProduct ;
+ :broader :Сыр_с_ароматом_топленого_молока, :Сыр_Королевский .
+
+:Сыр_косичка
+ rdf:type :FoodProduct ;
+ :broader :Сыр_вытяжной .
+
+:Сыр_Костромской
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый, :Сыр_голландского_типа .
+
+:Сыр_Латтер
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Сыр_Легкий
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Любимый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Маасдам
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Мастер
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Молочный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Монамонт
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Сыр_Мраморный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_мягкий
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сычужный .
+
+:Сыр_осетинский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_рассольный .
+
+:Сыр_плавленый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_кисломолочный .
+
+:Сыр_плавленый_консервированный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_плавленый .
+
+:Сыр_плавленый_сливочный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_плавленый .
+
+:Сыр_плавленый_со_вкусом_ветчины
+ rdf:type :FoodProduct ;
+ :broader :Сыр_плавленый .
+
+:Сыр_плавленый_со_вкусом_грибов
+ rdf:type :FoodProduct ;
+ :broader :Сыр_плавленый .
+
+:Сыр_плавленый_со_вкусом_Сэндвич
+ rdf:type :FoodProduct ;
+ :broader :Сыр_плавленый .
+
+:Сыр_плавленый_Чизбургер
+ rdf:type :FoodProduct ;
+ :broader :Сыр_плавленый .
+
+:Сыр_по-охотничьи
+ rdf:type :FoodProduct ;
+ :broader :Сыр_копченый .
+
+:Сыр_полутвердый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сычужный .
+
+:Сыр_рассольный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сычужный .
+
+:Сыр_Рокфор
+ rdf:type :FoodProduct ;
+ :broader :Сыр_мягкий .
+
+:Сыр_Российский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_с_ароматом_топленого_молока
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_свежий
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_Сливочный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Сметанковый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Советский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Сыр_сухой
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_сывороточный
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_сычужный
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_твердый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_сычужный .
+
+:Сыр_творожный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_кисломолочный .
+
+:Сыр_творожный_Крем_Чиз
+ rdf:type :FoodProduct ;
+ :broader :Сыр_творожный .
+
+:Сыр_творожный_сливочный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_творожный .
+
+:Сыр_творожный_соленый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_творожный .
+
+:Сыр_творожный_шоколадный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_творожный .
+
+:Сыр_тертый
+ rdf:type :FoodProduct ;
+ :broader :Сыр .
+
+:Сыр_тертый_сливочный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_тертый .
+
+:Сыр_Тильзитер
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_типа_Фета
+ rdf:type :FoodProduct ;
+ :broader :Сыр_рассольный .
+
+:Сыр_Тульер
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Сыр_Честор
+ rdf:type :FoodProduct ;
+ :broader :Сыр_мягкий .
+
+:Сыр_швейцарский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Сыр_Элегантный
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Сыр_Ярославский
+ rdf:type :FoodProduct ;
+ :broader :Сыр_голландского_типа .
+
+:Сыроварня_Мега-Мастер
+ rdf:type :ProductionUnit ;
+ :place :Москва ;
+ :url "cheese-master.ru" .
+
+:Сыроварня_Таганрог
+ rdf:type :ProductionUnit ;
+ :place :Таганрог ;
+ :vk "vk.com/branza_tgn" ;
+ :prod :Брынза, :Моцарелла, :Буррата, :Валансе, :Ярг .
+
+:Сыроварня_Южный_кот
+ :place :Таганрог ;
+ :prod :Сыр, :Йогурт, :Мороженое, :Творог ;
+ rdf:type :ProductionUnit ;
+ :phone "89198737330" .
+
+:Сыродельный_комбинат_Ленинградский
+ rdf:type :ProductionUnit ;
+ :place :Ленинградская ;
+ :company :ЗАО_СК_Ленинградский .
+
+:Сырок
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный .
+
+:Сырок_глазированный
+ rdf:type :FoodProduct ;
+ :broader :Сырок .
+
+:Сырок_творожный
+ rdf:type :FoodProduct ;
+ :broader :Сырок .
+
+:Таганрог
+ rdf:type :Place ;
+ :lat "47.209444" ;
+ :lon "38.935278" ;
+ :pop "250287" ;
+ :country :Россия .
+
+:Таганрог-Молоко
+ :end "2012" ;
+ rdf:type :ProductionUnit ;
+ :place :Таганрог ;
+ :sid "Таганрогский_гормолзавод" ;
+ :start "1938" .
+
+:Таджикистан
+ rdf:type :Country .
+
+:Таллинн
+ :country :Эстония ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Тамбовский
+ rdf:type :Place ;
+ :lat "52.652778" ;
+ :lon "80.984444" ;
+ :pop "736" ;
+ :country :Россия .
+
+:Тамбовский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Тамбовский ;
+ :url "tmbsir.ru" .
+
+:Тан
+ rdf:type :FoodProduct ;
+ :broader :Продукт_кисломолочный .
+
+:Тандер
+ rdf:type :Company .
+
+:Тацинская
+ rdf:type :Place ;
+ :lat "48.196389" ;
+ :lon "41.265833" ;
+ :pop "9927" ;
+ :country :Россия .
+
+:Тацинский_молочный_завод
+ rdf:type :ProductionUnit ;
+ :place :Тацинская ;
+ :url "tmz.su" .
+
+:Таширово
+ rdf:type :Place ;
+ :lat "55.421944" ;
+ :lon "36.655000" ;
+ :pop "1198" ;
+ :country :Россия .
+
+:Ташкент
+ :country :Узбекистан ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Тбилиси
+ :country :Грузия ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Творог
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Творог_0
+ rdf:type :FoodProduct ;
+ :broader :Творог_обезжиренный .
+
+:Творог_0_3
+ rdf:type :FoodProduct ;
+ :broader :Творог_обезжиренный .
+
+:Творог_0_5
+ rdf:type :FoodProduct ;
+ :broader :Творог_обезжиренный .
+
+:Творог_5
+ rdf:type :FoodProduct ;
+ :broader :Творог .
+
+:Творог_9
+ rdf:type :FoodProduct ;
+ :broader :Творог .
+
+:Творог_зерненый
+ rdf:type :FoodProduct ;
+ :broader :Творог .
+
+:Творог_мягкий
+ rdf:type :FoodProduct ;
+ :broader :Творог .
+
+:Творог_обезжиренный
+ rdf:type :FoodProduct ;
+ :broader :Творог .
+
+:Твороговъ
+ rdf:type :Trademark .
+
+:Творожок
+ rdf:type :FoodProduct ;
+ :broader :Изделие_кондитерское .
+
+:Творожок_с_ванилином
+ rdf:type :FoodProduct ;
+ :broader :Творожок .
+
+:Тимашевск
+ rdf:type :Place ;
+ :lat "45.618611" ;
+ :lon "38.945556" ;
+ :pop "55360" ;
+ :country :Россия .
+
+:Тимашевский_молочный_комбинат
+ rdf:type :ProductionUnit ;
+ :place :Тимашевск ;
+ :company :Вимм-Билль-Данн ;
+ :start "1990" ;
+ :tm :Кубанская_буренка, :Веселый_молочник, :Домик_в_деревне, :BioMax, :Фругурт, :Чудо, :Агуша ;
+ :prod :Молоко, :Кефир, :Творожок, :Коктейль_молочный, :Молоко_сгущенное, :Сырок_глазированный, :Творог, :Масса_творожная .
+
+:Тирасполь
+ :country :Приднестровье ;
+ rdf:type :Place ;
+ :lat "46.835991" ;
+ :lon "29.611113" .
+
+:Тольятти
+ rdf:type :Place ;
+ :lat "53.508889" ;
+ :lon "49.419167" ;
+ :pop "731544" ;
+ :country :Россия .
+
+:Тольяттимолоко
+ :place :Тольятти ;
+ :url "tltmilk.ru" ;
+ :start "1929" ;
+ :w "188" ;
+ rdf:type :ProductionUnit .
+
+:Топтыжка
+ rdf:type :Trademark .
+
+:Торецк
+ :country :Россия ;
+ rdf:type :Place ;
+ :lat "48.395895" ;
+ :lon "37.845879" .
+
+:Торжок
+ rdf:type :Place ;
+ :lat "57.041389" ;
+ :lon "34.960278" ;
+ :pop "45371" ;
+ :country :Россия .
+
+:Торжокский_молочный_комбинат_Тверца
+ :place :Торжок ;
+ :url "tmktv.ru" ;
+ :w "111" ;
+ rdf:type :ProductionUnit ;
+ :phone "84991133097" .
+
+:Тречча
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский .
+
+:Троельга
+ rdf:type :Place ;
+ :lat "57.462778" ;
+ :lon "56.534444" ;
+ :pop "778" ;
+ :country :Россия .
+
+:Тройня
+ rdf:type :Place ;
+ :lat "51.040278" ;
+ :lon "40.428333" ;
+ :pop "352" ;
+ :country :Россия .
+
+:Труд
+ :place :Троельга ;
+ :url "oootrud.ru" ;
+ :w "328" ;
+ rdf:type :ProductionUnit .
+
+:Тула
+ rdf:type :Place ;
+ :lat "54.193889" ;
+ :lon "37.615833" ;
+ :pop "546953" ;
+ :country :Россия .
+
+:Тульский_молочный_комбинат
+ :place :Тула ;
+ :url "tulamilk.ru" ;
+ :start "1943" ;
+ :w "516" ;
+ rdf:type :ProductionUnit ;
+ :tm :Бежин_луг, :Endorf ;
+ :prod :Молоко, :Молоко_топленое, :Кефир, :Сметана, :Масло_сливочное, :Творог, :Творог_мягкий, :Сырок_творожный, :Ацидолакт, :Ряженка, :Снежок, :Йогурт_питьевой, :Сыр_плавленый, :Сыр_творожный, :Сыр_Монамонт, :Сыр_Маасдам, :Сыр_Тульер, :Сыр_Латтер, :Пармезан, :Сыворотка_молочная_сухая_деминерализованная .
+
+:Туркменистан
+ rdf:type :Country .
+
+:Турция
+ rdf:type :Country .
+
+:Тэджон
+ :country :Южная_Корея ;
+ rdf:type :Place ;
+ :lat "36.348577" ;
+ :lon "127.384871" .
+
+:Тюмень
+ rdf:type :Place ;
+ :lat "57.153611" ;
+ :lon "65.542222" ;
+ :pop "744554" ;
+ :country :Россия .
+
+:Тюменьмолоко
+ :place :Тюмень ;
+ :url "tyumen-moloko.ru" ;
+ :w "344" ;
+ rdf:type :ProductionUnit ;
+ :phone "83452682750" .
+
+:Ува
+ rdf:type :Place ;
+ :lat "56.982778" ;
+ :lon "52.188333" ;
+ :pop "20128" ;
+ :country :Россия .
+
+:Ува-Молоко
+ :place :Ува ;
+ :url "uva-moloko.ru" ;
+ :w "774" ;
+ rdf:type :ProductionUnit ;
+ :phone "83413051535" .
+
+:Узбекистан
+ rdf:type :Country .
+
+:Украина
+ rdf:type :Country .
+
+:Ульяновск
+ rdf:type :Place ;
+ :lat "54.312500" ;
+ :lon "48.395556" ;
+ :pop "627870" ;
+ :country :Россия .
+
+:Умная_мама
+ :place :Санкт-Петербург ;
+ :url "умнаямама.рф" ;
+ :w "4" ;
+ rdf:type :ProductionUnit ;
+ :phone "89111900825" .
+
+:Унэ
+ rdf:type :Trademark .
+
+:Уральск
+ rdf:type :Place ;
+ :lat "51.204030" ;
+ :lon "51.370528" ;
+ :pop "356520" ;
+ :country :Казахстан .
+
+:Уфа
+ rdf:type :Place ;
+ :lat "54.765833" ;
+ :lon "56.031389" ;
+ :pop "944136" ;
+ :country :Россия .
+
+:Учебно-опытный_молочный_завод_ВГМХА
+ :place :Молочное ;
+ :url "moloko.vologda.ru" ;
+ rdfs:label "Учебно-опытный молочный завод ВГМХА им. Н.В. Верещагина" ;
+ :w "387" ;
+ rdf:type :ProductionUnit .
+
+:Фамильная_сыроварня_Чизбург
+ rdf:type :ProductionUnit ;
+ :place :Воронеж ;
+ :url "cheeseburg.ru" .
+
+:Фета
+ rdf:type :FoodProduct, :Trademark ;
+ :broader :Сыр_типа_Фета .
+
+:Фетаки
+ rdf:type :FoodProduct ;
+ :broader :Сыр_типа_Фета .
+
+:Франция
+ rdf:type :Country .
+
+:Фругурт
+ rdf:type :Trademark .
+
+:Харьков
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Хвалынск
+ rdf:type :Place ;
+ :lat "52.495000" ;
+ :lon "48.104722" ;
+ :pop "12293" ;
+ :country :Россия .
+
+:Херсон
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "40.372974" ;
+ :lon "49.853148" .
+
+:Хладокомбинат_N3
+ rdf:type :ProductionUnit ;
+ :place :Екатеринбург ;
+ :url "xk3.ru" ;
+ :start "1968" ;
+ :tm :Снежана ;
+ :prod :Мороженое_цветное .
+
+:Чабан
+ rdf:type :Trademark .
+
+:Чалтырь
+ rdf:type :Place ;
+ :lat "47.282778" ;
+ :lon "39.499167" ;
+ :pop "18595" ;
+ :country :Россия .
+
+:Частные_сыроварни_Сыробогатов
+ :place :Екатеринбург ;
+ :url "sirobogatov.ru" ;
+ :w "289" ;
+ rdf:type :ProductionUnit ;
+ :phone "83433110000" ;
+ :tm :Свежая_марка, :Плавия ;
+ :prod :Сыр_плавленый, :Сыр_Голландский, :Сыр_Костромской, :Сыр_Королевский_с_ароматом_топленого_молока, :Сыр_Легкий, :Сыр_Мраморный, :Сыр_Российский, :Сыр_Сметанковый, :Сыр_плавленый_со_вкусом_грибов, :Сыр_плавленый_со_вкусом_ветчины, :Сыр_плавленый_сливочный, :Сыр_плавленый_Чизбургер, :Сыр_плавленый_со_вкусом_Сэндвич, :Масло_сливочное_крестьянское, :Молоко_сгущенное, :Тан, :Айран .
+
+:Чегем-Второй
+ rdf:type :Place ;
+ :lat "43.592500" ;
+ :lon "43.596667" ;
+ :pop "11465" ;
+ :country :Россия .
+
+:Чегемский
+ rdf:type :ProductionUnit ;
+ :place :Чегем-Второй ;
+ :email "88663076986" ;
+ :prod :Молоко .
+
+:Чеддер
+ rdf:type :FoodProduct ;
+ :broader :Сыр_твердый .
+
+:Чечил
+ rdf:type :FoodProduct ;
+ :broader :Сыр_кисломолочный .
+
+:Чечил_балык_копченый
+ rdf:type :FoodProduct ;
+ :broader :Чечил_косичка .
+
+:Чечил_балык_молочный
+ rdf:type :FoodProduct ;
+ :broader :Чечил_косичка .
+
+:Чечил_копченый
+ rdf:type :FoodProduct ;
+ :broader :Сыр_копченый, :Чечил .
+
+:Чечил_косичка
+ rdf:type :FoodProduct ;
+ :broader :Чечил .
+
+:Чечил_косичка_копченый
+ rdf:type :FoodProduct ;
+ :broader :Чечил_косичка .
+
+:Чечил_косичка_молочный
+ rdf:type :FoodProduct ;
+ :broader :Чечил_косичка .
+
+:Чечил_нити
+ rdf:type :FoodProduct ;
+ :broader :Чечил .
+
+:Чижик
+ rdf:type :Retailer ;
+ :parent :X5 .
+
+:Чилиеджине
+ rdf:type :FoodProduct ;
+ :broader :Сыр_итальянский .
+
+:Чим-Чим
+ rdf:type :Trademark .
+
+:Чистая_линия
+ :place :Долгопрудный ;
+ :url "icecream-chl.ru" ;
+ :prod :Мороженое ;
+ :w "123" ;
+ rdf:type :ProductionUnit .
+
+:Чудо
+ rdf:type :Trademark .
+
+:Шатки
+ rdf:type :Place ;
+ :lat "55.185556" ;
+ :lon "44.121944" ;
+ :pop "9138" ;
+ :country :Россия .
+
+:Шатковский_комбинат_питания
+ :place :Шатки ;
+ rdf:type :ProductionUnit ;
+ :phone "89870874888" .
+
+:Швейцария
+ rdf:type :Country .
+
+:Шексна
+ rdf:type :Place ;
+ :lat "59.206667" ;
+ :lon "38.501389" ;
+ :pop "15230" ;
+ :country :Россия .
+
+:Шекснинский_маслозавод
+ rdf:type :ProductionUnit ;
+ :place :Шексна ;
+ :url "sheksnamaslo.ru" .
+
+:Шостка
+ :country :Украина ;
+ rdf:type :Place ;
+ :lat "51.868672" ;
+ :lon "33.472270" .
+
+:Щапово
+ :country :Россия ;
+ rdf:type :Place ;
+ :lat "55.159120" ;
+ :lon "38.181840" .
+
+:Щхыу
+ rdf:type :FoodProduct ;
+ :broader :Продукт_молочный, :Продукт_кисломолочный .
+
+:Щхыу_2_5
+ rdf:type :FoodProduct ;
+ :broader :Щхыу .
+
+:Экомилк_Нальчик
+ :place :Нальчик ;
+ :url "ecomilk.ru" ;
+ :w "589" ;
+ rdf:type :ProductionUnit ;
+ :phone "88662919921" .
+
+:ЭкоНива_Молоко_Воронеж
+ rdf:type :ProductionUnit ;
+ :place :Бобров ;
+ :url "ekoniva-moloko.com" ;
+ :tm :Светаево ;
+ :prod :Сметана .
+
+:Эрконпродукт
+ :place :Москва ;
+ :url "erconproduct.ru" ;
+ :w "172" ;
+ rdf:type :ProductionUnit ;
+ :phone "84954192982" .
+
+:Эскимо
+ rdf:type :FoodProduct ;
+ :broader :Мороженое .
+
+:Эстония
+ rdf:type :Country .
+
+:Южная_Корея
+ rdf:type :Country .
+
+:Ягодный_край
+ rdf:type :Trademark .
+
+:Ядрин
+ rdf:type :Place ;
+ :lat "55.940833" ;
+ :lon "46.200556" ;
+ :pop "8252" ;
+ :country :Россия .
+
+:Ядринмолоко
+ rdf:type :ProductionUnit ;
+ :place :Ядрин ;
+ :url "yamilk.ru" ;
+ :start "1931" .
+
+:Ялуторовск
+ rdf:type :Place ;
+ :lat "56.655000" ;
+ :lon "66.312778" ;
+ :pop "40701" ;
+ :country :Россия .
+
+:Ярг
+ rdf:type :FoodProduct ;
+ :broader :Сыр_полутвердый .
+
+:Ярославская
+ rdf:type :Place ;
+ :lat "44.612222" ;
+ :lon "40.461944" ;
+ :pop "5254" ;
+ :country :Россия .
+
+:Ястро
+ rdf:type :Company .
+

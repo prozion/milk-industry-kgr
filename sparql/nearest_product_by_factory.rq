@@ -1,12 +1,14 @@
-prefix : <https://purl.org/prozion/food_industry#>
+prefix : <https://purl.org/prozion/milk_industry#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix math: <http://www.w3.org/2005/xpath-functions/math#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 select distinct ?place1 ?factory ?place2 ?distance where {
-  values ?place1 { :Озеры }
+  values ?product_category { :Ряженка }
+  values ?place1 { :Никель }
   ?factory rdf:type :ProductionUnit .
   ?factory :prod ?product .
-  ?product :broader* :Молоко_сгущенное .
+  ?product :broader* ?product_category .
   ?factory :place ?place2 .
   ?place1 :lat ?lat1 .
   ?place1 :lon ?lon1 .
@@ -15,13 +17,13 @@ select distinct ?place1 ?factory ?place2 ?distance where {
 
   bind (6371 as ?R)
   bind ((math:pi() / 180) as ?k)
-  bind (?lat1 * ?k as ?phi1)
-  bind (?lat2 * ?k as ?phi2)
+  bind (xsd:float(?lat1) * ?k as ?phi1)
+  bind (xsd:float(?lat2) * ?k as ?phi2)
   bind (?phi2 - ?phi1 as ?dphi)
-  bind ((?lon2 - ?lon1)*?k as ?dlambda)
+  bind ((xsd:float(?lon2) - xsd:float(?lon1))*?k as ?dlambda)
   bind (math:sin(?dphi/2)*math:sin(?dphi/2) + math:cos(?phi1)*math:cos(?phi2)*math:sin(?dlambda/2)*math:sin(?dlambda/2) as ?a)
   bind (2*math:atan2(math:sqrt(?a), math:sqrt(1 - ?a)) as ?c)
-  bind (round(?R * ?c) as ?distance)
+  bind (xsd:integer(round(?R * ?c)) as ?distance)
 }
   order by asc(?distance)
-  limit 2
+  limit 5

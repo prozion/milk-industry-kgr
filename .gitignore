@@ -6,3 +6,5 @@ test.*
 test_*
 *_old.tree
 *_0.*
+*.tmp
+turtle/milk_industry_geo.ttl

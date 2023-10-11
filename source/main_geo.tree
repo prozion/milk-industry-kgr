@@ -1,4 +1,4 @@
-food_industry a:owl/Ontology ns:https://purl.org/prozion/milk_industry# rdfs/label:"Knowledge graph on Russian milk food industry"
+food_industry_geo a:owl/Ontology ns:https://purl.org/prozion/milk_industry# rdfs/label:"Knowledge graph on Russian milk food industry with Russian settlements"
 	namespaces
 		rdf ns:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 		rdfs ns:http://www.w3.org/2000/01/rdf-schema#
@@ -32,4 +32,5 @@ food_industry a:owl/Ontology ns:https://purl.org/prozion/milk_industry# rdfs/lab
 			[facts/places_russia_extra.tree]
 			[facts/places_ldnr.tree]
 		[facts/places_world.tree]
+	[../../../data/settlements_kgr/source/main_export.tree]
 		
