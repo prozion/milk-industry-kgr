@@ -20,16 +20,16 @@ setup d:"How to setup neccessary tools"
 		install_dependencies cmd:`sudo apt install libasound2 libcurl4 libgbm1 libgcrypt20 libgtk-3-0 libnotify4 libnss3 libglib2.0-bin xdg-utils libx11-xcb1 libxcb-dri3-0 libxss1 libxtst6 libxkbfile1`
 		download_atom url:github.com/atom/atom/releases/tag/v1.60.0 file:atom-amd64.tar.gz
 		untar_archive cmd:`mv atom-amd64.tar.gz ~/bin; tar xf ~/bin/atom-amd64.tar.gz`
-		install_racket_syntax cmd:`git clone git@github.com:prozion/atom-racket-syntax.git $ROOT_PATH/plugins/language_racket; ln -sf $ROOT_PATH/plugins/language_racket $ROOT_PATH/.atom/packages/language-racket`
-		install_tabtree_syntax cmd:`git clone git@github.com:prozion/tabtree-atom-syntax.git $ROOT_PATH/plugins/language_tabtree; ln -sf $ROOT_PATH/plugins/language_tabtree $ROOT_PATH/.atom/packages/language-tabtree`
-		install_rdf_syntax cmd:`git clone https://github.com/mjansing/language-rdf.git $ROOT_PATH/plugins/language_rdf; ln -sf $ROOT_PATH/plugins/language_rdf $ROOT_PATH/.atom/packages/language-rdf`
+		atom_racket_syntax cmd:`git clone git@github.com:prozion/atom-racket-syntax.git $ROOT_PATH/plugins/language_racket; ln -sf $ROOT_PATH/plugins/language_racket $ROOT_PATH/.atom/packages/language-racket`
+		atom_tabtree_syntax cmd:`git clone git@github.com:prozion/tabtree-atom-syntax.git $ROOT_PATH/plugins/language_tabtree; ln -sf $ROOT_PATH/plugins/language_tabtree $ROOT_PATH/.atom/packages/language-tabtree`
+		atom_rdf_syntax cmd:`git clone https://github.com/mjansing/language-rdf.git $ROOT_PATH/plugins/language_rdf; ln -sf $ROOT_PATH/plugins/language_rdf $ROOT_PATH/.atom/packages/language-rdf`
 workflow d:"My usual workflow"
-	perform_checks
+	perform_checks prereq:install_odysseus,install_tabtree
 		check_duplications cmd:`scripts/checks/check_dupids.sh factories.tree`
 		check_undeclared_cities cmd:`scripts/checks/new_places.rkt`
 		check_undeclared_resources cmd:`scripts/checks/check_undeclared.sh`
-	editing_tabtree_files code-editor:Atom
+	editing_tabtree_files prereq:atom_tabtree_syntax code-editor:Atom
 		sort_by_hand-added_factories cmd:`scripts/sorts/sort_factories.sh`
-	compile_turtle cmd:`scripts/generators/compile_turtle.sh`
-	validate_turtle cmd:`ttl turtle/milk_industry.ttl`
-	sparql_query cmd:`arq --data turtle/milk_industry.ttl --query sparql/nearest_condensed_milk.rq`
+	compile_turtle prereq:install_odysseus,install_tabtree cmd:`scripts/generators/compile_turtle.sh`
+	validate_turtle prereq:rdf_validator cmd:`ttl turtle/milk_industry.ttl`
+	sparql_query prereq:arq cmd:`arq --data turtle/milk_industry.ttl --query sparql/nearest_product_by_factory.rq`
