@@ -1,5 +1,6 @@
 sources +a:Source
 	Fabr url:fabricators.ru/zavody d:"Список производств и компаний молочной промышленности"
+	Fs url:foodsuppliers.ru
 	Pr url:product.ru d:"Поиск компаний по производимому продукту"
 	Retailers url:retail.ru/rbc/tradingnetworks/businesses/food-retail-alcohol d:"Список ритейлеров"
 	W url:wikipedia.org d:"Википедия"
