@@ -1,0 +1,13 @@
+materials +a:Material +hi-inv-rel:broader
+	ALU deabbr:"Алюминий"
+	FE deabbr:"Жесть"
+	GL deabbr:"Стекло"
+	PAP deabbr:"Бумага" d:"Бумага, Картон гофрированный"
+	PE deabbr:"Полиэтилен"
+		FPO-PE
+		HDPE alt:ПНД deabbr:"Полиэтилен высокой плотности" d:"Полиэтилен низкого давления"
+		LDPE alt:ПВД deabbr:"Полиэтилен низкой плотности" d:"Полиэтилен высокого давления"
+		PET alt:ПЭТ deabbr:"Полиэтилентерефталат"
+	PP alt:ПП deabbr:"Полипропилен"
+	PS alt:ПС deabbr:"Полистирол"
+	PVC alt:ПВХ deabbr:"Поливинилхлорид"

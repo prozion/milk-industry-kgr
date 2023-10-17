@@ -7,12 +7,14 @@
 	Дикси parent:Тандер url:dixy.ru
 	Европа url:europa-ts.ru
 	Карусель
+	Красное_и_Белое parent:Mercury_Retail_Group start:2006 hq:Челябинск
 	Лента
 	Линия url:linia-market.ru
 	Магнит parent:Тандер start:1994 hq:Краснодар url:magnit.ru
 	Магнолия start:1992 hq:Москва
 	Метрополис
 	Монетка start:2001 hq:Екатеринбург
+	КуулКлевер url:coolclever.ru
 	Огонек_Эконом url:ogonek68.ru vk:vk.com/ogonek68
 	ОКей name:"О'Кей"
 	Перекресток parent:X5
@@ -20,7 +22,10 @@
 	Пятерочка parent:X5
 	Самокат
 	Светофор
+	Фермерский_дворик
 	Чижик parent:X5
 	Billa
+	Eurospar
 	FixPrice
 	Metro url:metro-cc.ru
+	Sordis url:sordis.ru

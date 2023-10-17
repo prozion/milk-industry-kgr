@@ -12,4 +12,5 @@ properties +a:rdf/Property +hi-inv-rel:subproperty-of
 		former-id
 	rdfs/label
 		name domain:Object range:rdfs/Literal
+			former-name
 			

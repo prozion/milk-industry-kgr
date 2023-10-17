@@ -1,0 +1,14 @@
+
+prefix : <https://purl.org/prozion/milk_industry#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select (sample(?factory) as ?producer) (?product_category as ?unique_product)
+where {
+  ?factory rdf:type :ProductionUnit .
+  ?factory :prod ?product .
+  ?product :broader* ?product_category .
+  ?product_category :broader* :Сыр .
+}
+group by ?product_category
+having (count(distinct ?factory) = 1)

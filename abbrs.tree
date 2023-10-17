@@ -1,6 +1,7 @@
-abbreviations +a:Abbreviation
+abbreviations +a:Abbreviation rdfs/seeAlso:sokr.ru
 	АПК deabbr:"Агропромышленный комплекс"
 	ЖК deabbr:"Животноводческий комплекс"
+	МЗ deabbr:"Молочный завод"
 	МЖК deabbr:"Масло-жировой комбинат"
 	МПК deabbr:"Молочно-перерабатывающий комплекс"
 	ОП deabbr:"Опытное предприятие"

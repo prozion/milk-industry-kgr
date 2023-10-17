@@ -8,3 +8,4 @@ test_*
 *_0.*
 *.tmp
 turtle/milk_industry_geo.ttl
+_generated

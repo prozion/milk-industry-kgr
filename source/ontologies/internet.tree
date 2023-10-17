@@ -13,6 +13,8 @@ properties +a:rdf/Property +hi-inv-rel:subproperty-of
 		fb
 		github
 		linkedin
-		old-url
 		vk
 		yt
+	url
+		defunct-url
+			old-url

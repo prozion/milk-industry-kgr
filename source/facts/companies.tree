@@ -7,16 +7,18 @@ companies +a:Company
 	ЗАО_СК_Ленинградский
 	Киприно
 	Компания_Молоко owns-tm:Отчизна
-	Милком
+	Милком url:milkom-komos.ru
 	Молвест
 	Ренна
 	Русагро alt:РусАгро
 	Савушкин_продукт
 	Тандер
+	ООО_Экомилк hq:Москва url:ecomilk.ru owns-tm:Экомилк
 	Ястро
+	Auchan_Holding
 	Danone
 	Food_Union
+	Mercury_Retail_Group
 	PepsiCo alt:ПепсиКо
-	Auchan_Holding
 	X5 owns-tm:Светаево
 	7утра
