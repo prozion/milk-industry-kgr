@@ -20,7 +20,9 @@ food_industry a:owl/Ontology ns:https://purl.org/prozion/milk_industry# rdfs/lab
 	[ontologies/time.tree]
 	[ontologies/trademark.tree]
 	individuals
+		[taxonomies/materials.tree]
 		[taxonomies/products.tree]
+		[taxonomies/product_formats.tree]
 		[facts/companies.tree]
 		[facts/factories.tree]
 		[facts/retailers.tree]

@@ -1,6 +1,8 @@
-abbreviations +a:Abbreviation rdfs/seeAlso:sokr.ru
+abbreviations +a:Abbreviation see-also:sokr.ru
 	АПК deabbr:"Агропромышленный комплекс"
+	ГК deabbr:"Группа компаний"
 	ЖК deabbr:"Животноводческий комплекс"
+	ЗМЖ deabbr:"Заменитель молочного жира"
 	МЗ deabbr:"Молочный завод"
 	МЖК deabbr:"Масло-жировой комбинат"
 	МПК deabbr:"Молочно-перерабатывающий комплекс"

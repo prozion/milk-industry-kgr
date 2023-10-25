@@ -1,7 +1,9 @@
 ритейлеры +a:Retailer
+	Августина url:avgustina.pro
 	Азбука_Вкуса
 	Ароматный_мир
 	Ашан parent:Auchan_Holding start:2002 url:auchan.ru
+	Бахетле
 	Верный start:2012
 	ВкусВилл
 	Дикси parent:Тандер url:dixy.ru
@@ -27,5 +29,5 @@
 	Billa
 	Eurospar
 	FixPrice
-	Metro url:metro-cc.ru
+	Metro start:1964 url:metro-cc.ru
 	Sordis url:sordis.ru

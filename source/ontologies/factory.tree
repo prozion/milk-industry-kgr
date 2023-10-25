@@ -16,7 +16,7 @@ properties +a:rdf/Property +hi-inv-rel:subproperty-of
 	sid range:SovietId d:"An idified name of the production unit in the Soviet time"
 	src domain:ProductionUnit range:Product d:"Raw materials for production unit"
 	tsid range:TsarTimeId d:"An idified name of the production unit before the Revolution by the time of Tsar Government, or by the time of bourgeois Provisional Government in 1917"
-	packs-into domain:ProductionUnit range:Pack
+	packs-into domain:ProductionUnit range:Package
 	raw domain:ProductionUnit range:RawProduct
 	retail domain:ProductionUnit range:Retailer
 	stop domain:ProductionUnit range:Year

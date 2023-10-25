@@ -1,4 +1,6 @@
 sources +a:Source
+	Dia url:dairynews.today self-def:"крупнейшее русскоязычное специализированное СМИ мировой молочной отрасли"
+	DiSAI url:catalog.disai.org title:"Каталог продукции участников системы DiSAI"
 	Fabr url:fabricators.ru/zavody d:"Список производств и компаний молочной промышленности"
 	Fs url:foodsuppliers.ru
 	Pr url:product.ru d:"Поиск компаний по производимому продукту"

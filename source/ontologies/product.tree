@@ -14,9 +14,9 @@ classes +a:owl/Class +hi-inv-rel:subclass-of
 properties +a:rdf/Property +hi-inv-rel:subproperty-of
 	fat range:Decimal d:"fat percent in the product"
 	mat domain:Package range:Material
-	pkg domain:rdf/Statement range:Package
+	pf range:ProductFormat
+		pkg domain:rdf/Statement range:Package
 	prod domain:ProductionUnit range:Product
 	prod-format domain:ProductionUnit range:ProductFormat
 	prod-group domain:Product range:Product
-	title domain:Artifact range:rdfs/Literal
 	handles-prod domain:Company range:Product

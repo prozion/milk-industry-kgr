@@ -4,3 +4,4 @@ properties +a:rdf/Property +hi-inv-rel:subproperty-of
 	s d:"Source"
 		s-wiki
 	s-url subproperty-of:s,url range:UrlCore
+	self-def domain:Source range:rdfs/Literal d:"Self-definition by the source"

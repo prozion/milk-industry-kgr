@@ -9,6 +9,10 @@ classes +a:owl/Class +hi-inv-rel:subclass-of
 	Company
 		EquipmentCompany
 		Retailer
+	Company
+		Holding
+			Agroholding
+			GroupOfCompanies see-also:www.ap-group.ru/netcat_files/File/ej/article_4_2.pdf
 properties +a:rdf/Property +hi-inv-rel:subproperty-of
 	owned-by domain:Property range:Organization
 	parent domain:Organization range:Organization d:"Parent organization in a form of Holding, umbrella company or whatever"
