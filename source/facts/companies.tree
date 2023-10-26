@@ -2,6 +2,7 @@ companies +a:Company
 	Абсолют
 	Агрокомплекс_Выселковский
 	Агрофирма_Оптина url:af-optina.com
+	АХ_Белозорие *a:Agroholding hq:Архангельск url:belozorie.ru owns-tm:Белозорие
 	Вимм-Билль-Данн hq:Москва url:wbd.ru parent:PepsiCo owns-tm:Имунеле
 	ГК_Белый_Медведь
 	ГК_Доминант hq:Москва url:dominantsugar.ru *a:GroupOfCompanies
@@ -11,6 +12,7 @@ companies +a:Company
 	Компания_Молоко owns-tm:Отчизна
 	Милком url:milkom-komos.ru parent:Комос_Групп
 	Молвест
+	Олакс *a:GroupOfCompanies hq:Авторемзавод url:olaks.ru start:1993
 	Ренна hq:Москва url:renna.ru
 	Русагро alt:РусАгро
 	Савушкин_продукт
