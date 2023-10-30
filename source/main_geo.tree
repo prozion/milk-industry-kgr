@@ -7,7 +7,6 @@ food_industry_geo a:owl/Ontology ns:https://purl.org/prozion/milk_industry# rdfs
 	[ontologies/company.tree]
 	[ontologies/editing.tree]
 	[ontologies/factory.tree]
-	[ontologies/food_product.tree]
 	[ontologies/internet.tree]
 	[ontologies/number.tree]
 	[ontologies/object.tree]

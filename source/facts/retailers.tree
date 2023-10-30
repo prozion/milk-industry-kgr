@@ -6,6 +6,7 @@
 	Бахетле
 	Верный start:2012
 	ВкусВилл
+	Да name:"Да!" start:2015 url:market-da.ru parent:ОКей
 	Дикси parent:Тандер url:dixy.ru
 	Европа url:europa-ts.ru
 	Карусель

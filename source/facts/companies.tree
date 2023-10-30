@@ -16,7 +16,7 @@ companies +a:Company
 	Ренна hq:Москва url:renna.ru
 	Русагро alt:РусАгро
 	Савушкин_продукт
-	Тандер
+	Тандер start:1998 hq:Краснодар
 	ТД_Кремлевский start:2000 url:tdkremlin.ru
 	ООО_Экомилк hq:Москва url:ecomilk.ru owns-tm:Экомилк
 	Ястро
